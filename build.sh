@@ -23,7 +23,7 @@ files=(
   "$ROOT/docs/known-unknowns.md"
   "$ROOT/docs/lessons-learned.md"
   "$ROOT/docs/evidence-method.md"
-  "$ROOT/full-narrative.md"
+  "$ROOT/assets/full-narrative.md"
 )
 
 for f in "${files[@]}"; do

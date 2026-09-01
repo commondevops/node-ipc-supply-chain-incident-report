@@ -43,8 +43,8 @@ In May 2026, three malicious node-ipc releases appeared on npm while the upstrea
 10. [Known Unknowns](docs/known-unknowns.md)
 11. [Lessons Learned](docs/lessons-learned.md)
 12. [Scope, Evidence Method & Register](docs/evidence-method.md)
-13. [Full Narrative (original long-read)](full-narrative.md)
+13. [Full Narrative (original long-read)](assets/full-narrative.md)
 
 ## About this report
 
-This is a structured incident report built from the original long-read. The full original narrative is preserved unchanged in [full-narrative.md](full-narrative.md).
+This is a structured incident report built from the original long-read. The full original narrative is preserved unchanged in [full-narrative.md](assets/full-narrative.md).
