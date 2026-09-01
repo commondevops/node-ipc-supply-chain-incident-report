@@ -23,3 +23,21 @@ Seen that way, `node-ipc` was not only an npm incident. It was an identity incid
 This is both the strength and the weakness of modern software reuse. Developers can build extraordinary systems because they do not have to renegotiate every trust relationship from first principles each time they install a package. But the same efficiency means risk can also be inherited.
 
 The answer is not to distrust open source. Modern software development would be nearly impossible without it. The more useful lesson is to stop thinking of trust as permanent. A package can deserve confidence for years and still become dangerous if control of its publishing path changes.
+
+## Impact & Exposure Assessment
+
+The incident should be evaluated as a sequence of increasingly strong impact states, rather than as a single binary outcome. Each state proves something different, and the investigation's confidence in each state differs accordingly.
+
+| State | What it proves | Status in this investigation |
+|---|---|---|
+| Malicious version published | Supply-chain compromise exists | Confirmed |
+| Package selected/downloaded | Potential consumer exposure | Environment-specific |
+| Compromised CJS loaded | Malicious runtime path reached | Requires victim evidence |
+| Collection observed | Host secrets actually read | Requires victim evidence |
+| Archive staged | Collection pipeline progressed | Requires victim evidence |
+| DNS exfil queries emitted | Exfiltration attempt occurred | Requires DNS/host evidence |
+| Remote receipt proven | Attacker received victim data | Not established |
+
+This distinction is operationally important for incident response. A host that merely contains a malicious package may warrant investigation and secret rotation based on risk, but the forensic statement should not be upgraded to "confirmed data theft" without supporting telemetry. Stages marked *Requires victim evidence* or *Not established* cannot be asserted from the package contents alone; they depend on host-level telemetry (process, filesystem, and DNS records) specific to each affected machine. Where that evidence is absent, the correct statement is a risk-based recommendation, not a confirmed impact claim.
+
+The boundary between **capability** and **impact** is the core of this assessment. A malicious package that contains credential-collection and DNS-exfiltration code demonstrates what the payload *can* do; it does not by itself prove that a specific consumer executed the payload, that credentials were collected from that consumer, or that data was successfully received by a remote operator. Capability is established from the code; impact requires evidence from the victim environment. Conflating the two overstates the incident and can misdirect response effort.

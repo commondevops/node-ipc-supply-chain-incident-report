@@ -35,3 +35,51 @@ That proximity is what gave the compromise its reach. A third-party package runn
 A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
 
 > **The package was not valuable because of what it contained. It was valuable because of where developers were willing to run it.**
+
+## Incident record
+
+This section records the technical facts from the incident record, with a confidence rating for each claim. Ratings: **Confirmed** (stated directly in the record), **Supported** (reported but approximate or inferential), **Plausible** (reasonable but not directly evidenced), **Not established** (absent or unproven).
+
+### Origin of the public report
+
+The public incident began with GitHub issue #15, opened on **14 May 2026 at 15:01:21Z**, titled *"[SECURITY][REPORT] node-ipc@12.0.1 CJS bundle contains obfuscated infostealer payload."* The report states that malicious code had been appended to the CommonJS bundle after the legitimate `module.exports` boundary.
+
+The issue documents a package shasum for `12.0.1`:
+
+```
+fe5d107b9d285327af579259a32977c4f475fa26
+```
+
+### Affected versions
+
+| Version | Evidence | Assessment |
+|---|---|---|
+| `9.1.6` | Added in contemporaneous GitHub issue discussion | Confirmed affected in incident record |
+| `9.2.3` | Reported by independent investigator in GitHub issue | Confirmed affected in incident record |
+| `12.0.1` | Original issue and technical analysis | Confirmed affected |
+
+### Release timing
+
+The investigation record reports a rapid three-release sequence: `12.0.1`, followed roughly 30 seconds later by `9.2.3`, then roughly 30 seconds later by `9.1.6`. The comment gives a first clock time of **14:25:30** but does not state a timezone; this report does not invent one.
+
+### Entry point and execution condition
+
+The issue states that the malicious code existed in `node-ipc.cjs`, the CommonJS entry point, while the ESM entry point `node-ipc.js` and other source files were clean. That distinction matters operationally: package presence alone was not equivalent to malicious execution. The highest-risk condition was a consumer environment that resolved an affected npm version and then loaded the compromised CommonJS path.
+
+### Verification in the issue thread
+
+A researcher responding to the issue reported manually confirming the compromise and notifying npm security. The same thread identified `9.2.3`, `12.0.1`, and then `9.1.6` as affected.
+
+### Confidence assessment
+
+| Claim | Confidence | Basis |
+|---|---|---|
+| Issue #15 opened 14 May 2026 at 15:01:21Z with the stated title | Confirmed | GitHub issue record |
+| Package shasum `fe5d107b9d285327af579259a32977c4f475fa26` for `12.0.1` | Confirmed | Documented in issue #15 |
+| `9.1.6`, `9.2.3`, `12.0.1` affected | Confirmed | Issue thread and technical analysis |
+| Three-release sequence ~30s apart (`12.0.1` → `9.2.3` → `9.1.6`) | Supported | Reported in investigation record; intervals approximate |
+| First release clock time 14:25:30 | Supported | Given in record comment |
+| Timezone for the 14:25:30 clock time | Not established | Record does not state it |
+| Malicious code in `node-ipc.cjs`; `node-ipc.js` and other source files clean | Confirmed | Issue states the entry-point distinction |
+| Package presence alone not equivalent to malicious execution | Supported | Inferred from the CommonJS-entry-point execution condition |
+| Researcher manually confirmed compromise and notified npm security | Confirmed | Reported in issue thread |

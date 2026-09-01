@@ -17,3 +17,26 @@ The `node-ipc` compromise was therefore more than the story of malicious release
 Most days, those relationships are invisible.
 
 On May 14, 2026, they became the story.
+
+## Findings at a Glance
+
+| Finding | Assessment | Confidence |
+|---|---|---|
+| Malicious npm artifacts published | Confirmed | High |
+| CommonJS distribution contained appended payload | Confirmed | High |
+| Credential collection capability | Confirmed | High |
+| DNS query-name exfiltration capability | Confirmed | High |
+| Valid maintainer publishing authority abused | Supported | High |
+| Email-domain recovery caused npm takeover | Plausible, not proven | Medium/Low |
+| Successful victim data receipt | Not established | Unknown |
+| Human actor attribution | Not established | Unknown |
+
+## Conclusion
+
+The 2026 `node-ipc` incident shows how a software supply-chain event can begin as an identity and publishing-authority failure and end as malicious code executing inside trusted developer or CI contexts.
+
+The malicious behavior itself is technically well supported: compromised CommonJS artifacts, credential collection, archive staging, and DNS query-name exfiltration were documented in the public incident response. The independent investigation adds a separate evidentiary layer: a newly/currently registered maintainer email domain, an operational PrivateEmail mailbox, authenticated replies from that domain, contemporaneous WHOIS and DNS captures, and a documented attempt to preserve registrar and email-provider records.
+
+Those facts make an email-based account-recovery compromise plausible. They do not prove it.
+
+The strongest report therefore stops at the evidence boundary: valid npm publishing authority was abused, and the exact acquisition mechanism remains unresolved. That distinction is not a weakness in the analysis — it is what makes the analysis reproducible.

@@ -15,3 +15,39 @@ A publishing account is not secured only by its current password or MFA configur
 Dormant publishing authority is security debt. So are expired domains, forgotten recovery addresses, and contributors who still possess privileges long after their role in a project has ended.
 
 > **Old identities do not stop mattering just because everyone has stopped thinking about them.**
+
+## Causal Analysis
+
+A useful causal model separates what is demonstrated from what is hypothesized. Confidence language below marks the strength of each link: **Confirmed** (directly observed), **Supported** (consistent with evidence but not directly observed), **Plausible** (reasoned, not yet evidenced), and **Not established** (no current evidence).
+
+### Demonstrated chain
+
+Valid npm publishing authority -> malicious npm versions -> vulnerable dependency resolution -> compromised CommonJS execution path -> credential collection + DNS-exfiltration capability.
+
+- Valid npm publishing authority: **Confirmed** — the affected versions were published through an authoritative channel.
+- Malicious npm versions: **Confirmed** — `9.1.6`, `9.2.3`, and `12.0.1` contain a malicious CommonJS path (`node-ipc.cjs`) with an appended obfuscated IIFE.
+- Vulnerable dependency resolution: **Supported** — consumers that resolve these versions load the malicious artifact; no victim-specific telemetry is on file to confirm a given consumer did so.
+- Compromised CommonJS execution path: **Plausible** — the code path is present in the artifact; execution on a specific host is not yet evidenced.
+- Credential collection + DNS-exfiltration capability: **Supported** as capability, **Not established** as impact for any specific consumer (see evidentiary boundary below).
+
+Every arrow after package publication remains conditional on the consumer environment until victim-specific telemetry is available.
+
+### Plausible but unproven identity chain
+
+Expired/lapsed maintainer email domain -> new registration -> mailbox operation -> npm account recovery -> use of publisher authority.
+
+- Expired/lapsed maintainer email domain: **Confirmed** — the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident.
+- New registration: **Supported** — a May 7 registration is directly supported by the evidence.
+- Mailbox operation: **Supported** — a later operational mailbox is directly supported by the evidence.
+- npm account recovery: **Not established** — the evidence does not contain the npm recovery event required to close this link.
+- Use of publisher authority: **Plausible** — inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
+
+The evidence directly supports the middle observations (a May 7 registration and later operational mailbox) but does not contain the npm recovery event required to close the chain. No actor identity or victim data is asserted beyond what the evidence shows.
+
+### Root-cause statement
+
+> **Unauthorized use of valid npm publishing authority associated with a maintainer identity allowed malicious package artifacts to enter the official distribution channel. The exact credential-recovery or account-takeover mechanism is unresolved.**
+
+### Evidentiary boundary: capability is not impact
+
+A package containing credential collection and DNS-exfiltration code does not by itself prove that a specific consumer executed it, that credentials were collected from that consumer, or that data was received remotely. Capability observed in the artifact is **Supported**; impact on any particular victim remains **Not established** absent victim-specific telemetry.

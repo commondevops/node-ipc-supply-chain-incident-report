@@ -26,16 +26,24 @@ In May 2026, three malicious node-ipc releases appeared on npm while the upstrea
 | Contained by | May 15, 2026 |
 | Detection | Public GitHub issue #15 |
 | Root cause | Dormant maintainer identity tied to lapsed domain atlantis-software.net |
+| 12.0.1 shasum | fe5d107b9d285327af579259a32977c4f475fa26 |
+| Malicious entry point | node-ipc.cjs (CommonJS); ESM node-ipc.js clean |
 
 ## Contents
 
-- [Incident Overview & Background](docs/overview.md)
-- [Timeline: Forty-Eight Hours](docs/timeline.md)
-- [Root Cause Analysis](docs/root-cause.md)
-- [Impact & Threat Model](docs/impact.md)
-- [Remediation & Recommendations](docs/remediation.md)
-- [Lessons Learned](docs/lessons-learned.md)
-- [Full Narrative (original long-read)](full-narrative.md)
+1. [Incident Overview & Background](docs/overview.md)
+2. [Timeline: Forty-Eight Hours](docs/timeline.md)
+3. [Technical Attack Reconstruction](docs/technical-analysis.md)
+4. [Maintainer Identity & Publishing Path](docs/maintainer-identity.md)
+5. [Domain, Email & Registrar Evidence](docs/domain-email-registrar.md)
+6. [Root Cause Analysis](docs/root-cause.md)
+7. [Impact & Threat Model](docs/impact.md)
+8. [Indicators & Detection Opportunities](docs/indicators.md)
+9. [Remediation & Recommendations](docs/remediation.md)
+10. [Known Unknowns](docs/known-unknowns.md)
+11. [Lessons Learned](docs/lessons-learned.md)
+12. [Scope, Evidence Method & Register](docs/evidence-method.md)
+13. [Full Narrative (original long-read)](full-narrative.md)
 
 ## About this report
 
