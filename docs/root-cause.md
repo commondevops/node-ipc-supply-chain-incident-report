@@ -22,25 +22,17 @@ A useful causal model separates what is demonstrated from what is hypothesized. 
 
 ### Demonstrated chain
 
-Valid npm publishing authority -> malicious npm versions -> vulnerable dependency resolution -> compromised CommonJS execution path -> credential collection + DNS-exfiltration capability.
+The demonstrated chain runs from valid npm publishing authority to malicious npm versions, then to vulnerable dependency resolution, then to a compromised CommonJS execution path, and finally to credential collection and DNS-exfiltration capability.
 
-- Valid npm publishing authority is **Confirmed**, because the affected versions were published through an authoritative channel.
-- Malicious npm versions are **Confirmed**: `9.1.6`, `9.2.3`, and `12.0.1` contain a malicious CommonJS path (`node-ipc.cjs`) with an appended obfuscated IIFE.
-- Vulnerable dependency resolution is **Supported**, because consumers that resolve these versions load the malicious artifact; no victim-specific telemetry is on file to confirm a given consumer did so.
-- The compromised CommonJS execution path is **Plausible**: the code path is present in the artifact, but execution on a specific host is not yet evidenced.
-- Credential collection and DNS-exfiltration capability is **Supported** as a capability but **Not established** as impact for any specific consumer (see evidentiary boundary below).
+Valid npm publishing authority is **Confirmed** because the affected versions were published through an authoritative channel. The malicious npm versions are **Confirmed**, because `9.1.6`, `9.2.3`, and `12.0.1` contain a malicious CommonJS path (`node-ipc.cjs`) with an appended obfuscated IIFE. Vulnerable dependency resolution is **Supported** because consumers that resolve these versions load the malicious artifact, though no victim-specific telemetry is on file to confirm a given consumer did so. The compromised CommonJS execution path is **Plausible**, because the code path is present in the artifact, but execution on a specific host is not yet evidenced. Credential collection and DNS-exfiltration capability is **Supported** as a capability but **Not established** as impact for any specific consumer (see evidentiary boundary below).
 
 Every arrow after package publication remains conditional on the consumer environment until victim-specific telemetry is available.
 
 ### Plausible but unproven identity chain
 
-Expired/lapsed maintainer email domain -> new registration -> mailbox operation -> npm account recovery -> use of publisher authority.
+The plausible but unproven identity chain runs from an expired or lapsed maintainer email domain to a new registration, then to mailbox operation, then to npm account recovery, and finally to the use of publisher authority.
 
-- The expired/lapsed maintainer email domain is **Confirmed**: the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident.
-- A new registration is **Supported**, because a May 7 registration is directly supported by the evidence.
-- Mailbox operation is **Supported**, because a later operational mailbox is directly supported by the evidence.
-- npm account recovery is **Not established**, because the evidence does not contain the npm recovery event required to close this link.
-- Use of publisher authority is **Plausible**: it is inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
+The expired or lapsed maintainer email domain is **Confirmed**, because the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident. A new registration is **Supported** because a May 7 registration is directly supported by the evidence. Mailbox operation is **Supported** because a later operational mailbox is directly supported by the evidence. npm account recovery is **Not established** because the evidence does not contain the npm recovery event required to close this link. The use of publisher authority is **Plausible**, because it is inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
 
 The evidence directly supports the middle observations (a May 7 registration and later operational mailbox) but does not contain the npm recovery event required to close the chain. No actor identity or victim data is asserted beyond what the evidence shows.
 

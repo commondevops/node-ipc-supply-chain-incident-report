@@ -20,16 +20,7 @@ On May 14, 2026, they became the story.
 
 ## Findings at a Glance
 
-| Finding | Assessment | Confidence |
-|---|---|---|
-| Malicious npm artifacts published | Confirmed | High |
-| CommonJS distribution contained appended payload | Confirmed | High |
-| Credential collection capability | Confirmed | High |
-| DNS query-name exfiltration capability | Confirmed | High |
-| Valid maintainer publishing authority abused | Supported | High |
-| Email-domain recovery caused npm takeover | Plausible, not proven | Medium/Low |
-| Successful victim data receipt | Not established | Unknown |
-| Human actor attribution | Not established | Unknown |
+The finding "Malicious npm artifacts published" is assessed as Confirmed, with High confidence. The finding "CommonJS distribution contained appended payload" is assessed as Confirmed, with High confidence. The finding "Credential collection capability" is assessed as Confirmed, with High confidence. The finding "DNS query-name exfiltration capability" is assessed as Confirmed, with High confidence. The finding "Valid maintainer publishing authority abused" is assessed as Supported, with High confidence. The finding "Email-domain recovery caused npm takeover" is assessed as Plausible, not proven, with Medium/Low confidence. The finding "Successful victim data receipt" is assessed as Not established, with Unknown confidence. The finding "Human actor attribution" is assessed as Not established, with Unknown confidence.
 
 ## Conclusion
 

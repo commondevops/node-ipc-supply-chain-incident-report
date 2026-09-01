@@ -23,20 +23,9 @@ Only steps 1-3 can be inferred from dependency/package state. Steps 4-8 require 
 
 ## 2. Reconnaissance and credential collection
 
-The incident report documents collection of the following targets:
+The incident report documents a range of credential-collection targets.
 
-- OS platform, architecture, hostname, home directory, and temporary directory — establish the host's identity and layout for the operator.
-- `uname -a` — adds kernel and build details to that host profile.
-- Process ID and working directory — pin down where the process is running from.
-- All environment variables — may contain credentials, tokens, and configuration.
-- `/etc/hosts` — can reveal internal network mappings.
-- SSH keys and configuration — provide direct access to private repositories and servers.
-- Shell history and profiles — may expose commands, hosts, and inline secrets.
-- Cloud-provider credentials and configuration — grant access to cloud accounts and infrastructure.
-- Kubernetes configuration — can reach cluster workloads and secrets.
-- Application and developer configuration — often embeds connection strings and API keys.
-- Source-control and package-management material — exposes credentials for repositories and registries.
-- Other files likely to contain secrets — covers additional secret-bearing files the operator may value.
+The targets include the OS platform, architecture, hostname, home directory, and temporary directory, which establish the host's identity and layout for the operator. The `uname -a` output adds kernel and build details to that host profile. The process ID and working directory pin down where the process is running from. All environment variables may contain credentials, tokens, and configuration. The `/etc/hosts` file can reveal internal network mappings. SSH keys and configuration provide direct access to private repositories and servers. Shell history and profiles may expose commands, hosts, and inline secrets. Cloud-provider credentials and configuration grant access to cloud accounts and infrastructure. Kubernetes configuration can reach cluster workloads and secrets. Application and developer configuration often embeds connection strings and API keys. Source-control and package-management material exposes credentials for repositories and registries. Other files likely to contain secrets cover additional secret-bearing files the operator may value.
 
 This establishes **collection capability**. It does not establish which of these files actually existed on any specific victim host.
 
@@ -48,13 +37,9 @@ This design minimizes the number of independent outbound operations: many local 
 
 ## 4. DNS exfiltration design
 
-The reconstructed code uses DNS query names as the data channel. It divides encoded archive material into chunks and constructs a header/data/footer sequence using prefixes such as:
+The reconstructed code uses DNS query names as the data channel. It divides encoded archive material into chunks and constructs a header/data/footer sequence using three short prefixes.
 
-| Prefix | Role |
-|---|---|
-| `xh` | Header |
-| `xd` | Data |
-| `xf` | Footer |
+The `xh` prefix denotes the header, the `xd` prefix carries the data chunks, and the `xf` prefix denotes the footer.
 
 The issue discussion identifies `sh.azurestaticprovider.net` as the resolver/C2-related host and `bt.node.js` as the query suffix used by the reconstructed protocol.
 
@@ -70,14 +55,9 @@ The available evidence does **not** establish a durable autorun or persistence m
 
 The investigation also preserved WHOIS and DNS observations for `azurestaticprovider.net`, the domain family associated in the GitHub issue with `sh.azurestaticprovider.net`.
 
-The captured WHOIS result shows:
+The captured WHOIS result records the details of the domain as observed during the investigation.
 
-| Field | Observed value |
-|---|---|
-| Creation date | 2026-05-14T07:26:10Z |
-| Registrar | NICENIC INTERNATIONAL GROUP CO., LIMITED |
-| Nameservers | `NS3.MY-NDNS.COM`, `NS4.MY-NDNS.COM` |
-| Registrant | Privacy-redacted |
+The creation date is 2026-05-14T07:26:10Z, the registrar is NICENIC INTERNATIONAL GROUP CO., LIMITED, the nameservers are `NS3.MY-NDNS.COM` and `NS4.MY-NDNS.COM`, and the registrant is privacy-redacted.
 
 The creation timestamp falls on the same date as the malicious `node-ipc` publication. The same investigation captured DNS responses for the domain and its authoritative nameserver set.
 

@@ -28,15 +28,7 @@ The answer is not to distrust open source. Modern software development would be 
 
 The incident should be evaluated as a sequence of increasingly strong impact states, rather than as a single binary outcome. Each state proves something different, and the investigation's confidence in each state differs accordingly.
 
-| State | What it proves | Status in this investigation |
-|---|---|---|
-| Malicious version published | Supply-chain compromise exists | Confirmed |
-| Package selected/downloaded | Potential consumer exposure | Environment-specific |
-| Compromised CJS loaded | Malicious runtime path reached | Requires victim evidence |
-| Collection observed | Host secrets actually read | Requires victim evidence |
-| Archive staged | Collection pipeline progressed | Requires victim evidence |
-| DNS exfil queries emitted | Exfiltration attempt occurred | Requires DNS/host evidence |
-| Remote receipt proven | Attacker received victim data | Not established |
+The "Malicious version published" state proves that a supply-chain compromise exists, with a status of Confirmed in this investigation. The "Package selected/downloaded" state proves potential consumer exposure, with a status of Environment-specific in this investigation. The "Compromised CJS loaded" state proves that the malicious runtime path was reached, with a status of Requires victim evidence in this investigation. The "Collection observed" state proves that host secrets were actually read, with a status of Requires victim evidence in this investigation. The "Archive staged" state proves that the collection pipeline progressed, with a status of Requires victim evidence in this investigation. The "DNS exfil queries emitted" state proves that an exfiltration attempt occurred, with a status of Requires DNS/host evidence in this investigation. The "Remote receipt proven" state proves that the attacker received victim data, with a status of Not established in this investigation.
 
 This distinction is operationally important for incident response. A host that merely contains a malicious package may warrant investigation and secret rotation based on risk, but the forensic statement should not be upgraded to "confirmed data theft" without supporting telemetry. Stages marked *Requires victim evidence* or *Not established* cannot be asserted from the package contents alone; they depend on host-level telemetry (process, filesystem, and DNS records) specific to each affected machine. Where that evidence is absent, the correct statement is a risk-based recommendation, not a confirmed impact claim.
 

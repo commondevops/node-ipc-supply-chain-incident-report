@@ -4,12 +4,7 @@
 
 ## 1. Scope
 
-This report reconstructs four related questions:
-
-- What malicious behavior was present in the affected `node-ipc` npm releases?
-- What evidence connects the publication event to a maintainer publishing identity?
-- What did the independent domain, DNS, and email investigation establish?
-- Which causal claims are supported, plausible, or still unresolved?
+This report reconstructs four related questions. It asks what malicious behavior was present in the affected `node-ipc` npm releases. It asks what evidence connects the publication event to a maintainer publishing identity. It asks what the independent domain, DNS, and email investigation established. It also asks which causal claims are supported, plausible, or still unresolved.
 
 The report does **not** attempt to identify a specific human actor. It also does not claim victim compromise without victim-specific telemetry.
 
@@ -17,20 +12,13 @@ The report does **not** attempt to identify a specific human actor. It also does
 
 The analysis uses three evidence classes.
 
-| Class | Meaning | Examples in this report |
-|---|---|---|
-| **Primary / direct** | Original records or contemporaneous artifacts | GitHub issue/comments, original screenshots, original email thread, full message headers, Namecheap correspondence |
-| **Corroborating technical** | Independent technical observations consistent with primary evidence | Package reconstruction in the issue, DNS/WHOIS observations, npm/GitHub profile captures |
-| **Inference** | Explanation that connects established observations | Domain reacquisition used for npm password recovery; operator identity; motive |
+The **Primary / direct** class consists of original records or contemporaneous artifacts, such as GitHub issue/comments, original screenshots, original email thread, full message headers, and Namecheap correspondence. The **Corroborating technical** class consists of independent technical observations consistent with primary evidence, such as package reconstruction in the issue, DNS/WHOIS observations, and npm/GitHub profile captures. The **Inference** class consists of an explanation that connects established observations, such as domain reacquisition used for npm password recovery, operator identity, and motive.
 
 A primary record can still contain an investigator's hypothesis. The classification applies to the **claim**, not simply to the document containing it.
 
 ## 3. Confidence language
 
-- **Confirmed / High** means the claim is directly supported by primary evidence or multiple independent observations.
-- **Supported / Medium** means the evidence is consistent and meaningful but incomplete.
-- **Plausible / Low** means a reasonable explanation where a required causal link is absent.
-- **Not established** means the available evidence does not support the claim.
+**Confirmed / High** means the claim is directly supported by primary evidence or multiple independent observations. **Supported / Medium** means the evidence is consistent and meaningful but incomplete. **Plausible / Low** means a reasonable explanation where a required causal link is absent. **Not established** means the available evidence does not support the claim.
 
 ## 4. Evidence register (Appendix A)
 

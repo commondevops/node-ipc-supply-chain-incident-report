@@ -38,7 +38,7 @@ A compromised dependency does not need to attack every downstream system directl
 
 ## Incident record
 
-This section records the technical facts from the incident record, with a confidence rating for each claim. Ratings: **Confirmed** (stated directly in the record), **Supported** (reported but approximate or inferential), **Plausible** (reasonable but not directly evidenced), **Not established** (absent or unproven).
+This section records the technical facts from the incident record, with a confidence rating for each claim. A claim is **Confirmed** (stated directly in the record), **Supported** (reported but approximate or inferential), **Plausible** (reasonable but not directly evidenced), or **Not established** (absent or unproven).
 
 ### Origin of the public report
 
@@ -52,11 +52,7 @@ fe5d107b9d285327af579259a32977c4f475fa26
 
 ### Affected versions
 
-| Version | Evidence | Assessment |
-|---|---|---|
-| `9.1.6` | Added in contemporaneous GitHub issue discussion | Confirmed affected in incident record |
-| `9.2.3` | Reported by independent investigator in GitHub issue | Confirmed affected in incident record |
-| `12.0.1` | Original issue and technical analysis | Confirmed affected |
+Version `9.1.6` was added in a contemporaneous GitHub issue discussion, and it is confirmed affected in the incident record. Version `9.2.3` was reported by an independent investigator in a GitHub issue, and it is confirmed affected in the incident record. Version `12.0.1` is documented by the original issue and technical analysis, and it is confirmed affected.
 
 ### Release timing
 
@@ -72,14 +68,4 @@ A researcher responding to the issue reported manually confirming the compromise
 
 ### Confidence assessment
 
-| Claim | Confidence | Basis |
-|---|---|---|
-| Issue #15 opened 14 May 2026 at 15:01:21Z with the stated title | Confirmed | GitHub issue record |
-| Package shasum `fe5d107b9d285327af579259a32977c4f475fa26` for `12.0.1` | Confirmed | Documented in issue #15 |
-| `9.1.6`, `9.2.3`, `12.0.1` affected | Confirmed | Issue thread and technical analysis |
-| Three-release sequence ~30s apart (`12.0.1` → `9.2.3` → `9.1.6`) | Supported | Reported in investigation record; intervals approximate |
-| First release clock time 14:25:30 | Supported | Given in record comment |
-| Timezone for the 14:25:30 clock time | Not established | Record does not state it |
-| Malicious code in `node-ipc.cjs`; `node-ipc.js` and other source files clean | Confirmed | Issue states the entry-point distinction |
-| Package presence alone not equivalent to malicious execution | Supported | Inferred from the CommonJS-entry-point execution condition |
-| Researcher manually confirmed compromise and notified npm security | Confirmed | Reported in issue thread |
+The claim that Issue #15 opened on 14 May 2026 at 15:01:21Z with the stated title is Confirmed, based on the GitHub issue record. The claim that the package shasum `fe5d107b9d285327af579259a32977c4f475fa26` is for `12.0.1` is Confirmed, based on documentation in issue #15. The claim that `9.1.6`, `9.2.3`, and `12.0.1` are affected is Confirmed, based on the issue thread and technical analysis. The claim of a three-release sequence ~30s apart (`12.0.1` → `9.2.3` → `9.1.6`) is Supported, reported in the investigation record with intervals approximate. The claim that the first release clock time was 14:25:30 is Supported, as it is given in a record comment. The timezone for the 14:25:30 clock time is Not established, because the record does not state it. The claim that malicious code was in `node-ipc.cjs` while `node-ipc.js` and other source files were clean is Confirmed, because the issue states the entry-point distinction. The claim that package presence alone was not equivalent to malicious execution is Supported, inferred from the CommonJS-entry-point execution condition. The claim that a researcher manually confirmed the compromise and notified npm security is Confirmed, as it was reported in the issue thread.
