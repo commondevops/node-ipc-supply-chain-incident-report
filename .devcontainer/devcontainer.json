@@ -1,0 +1,8 @@
+{
+    "image": "openeuler/opencode:1.1.48-oe2403sp4",
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localEnv:HOME}/.config/opencode,target=/root/.config/opencode,type=bind,consistency=cached",
+	    "source=${localEnv:SSH_AUTH_SOCK},target=/root/.ssh/agent.sock,type=bind,consistency=cached"
+    ]
+}
