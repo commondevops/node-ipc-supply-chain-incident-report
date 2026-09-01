@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "js-yaml": "^5.4.1"
+  }
+}

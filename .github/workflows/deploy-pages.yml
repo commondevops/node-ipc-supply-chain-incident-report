@@ -30,7 +30,7 @@ jobs:
           node-version: 22
 
       - name: Build HTML
-        run: bash build.sh
+        run: bash scripts/build.sh
 
       - name: Verify output exists
         run: test -s dist/index.html && echo "dist/index.html built OK"

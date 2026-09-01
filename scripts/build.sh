@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Build: compile all markdown docs into a single HTML page using scripts/md2html.js.
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 OUT_DIR="$ROOT/dist"
 OUT_FILE="$OUT_DIR/index.html"
