@@ -24,11 +24,11 @@ A useful causal model separates what is demonstrated from what is hypothesized. 
 
 Valid npm publishing authority -> malicious npm versions -> vulnerable dependency resolution -> compromised CommonJS execution path -> credential collection + DNS-exfiltration capability.
 
-- Valid npm publishing authority: **Confirmed** — the affected versions were published through an authoritative channel.
-- Malicious npm versions: **Confirmed** — `9.1.6`, `9.2.3`, and `12.0.1` contain a malicious CommonJS path (`node-ipc.cjs`) with an appended obfuscated IIFE.
-- Vulnerable dependency resolution: **Supported** — consumers that resolve these versions load the malicious artifact; no victim-specific telemetry is on file to confirm a given consumer did so.
-- Compromised CommonJS execution path: **Plausible** — the code path is present in the artifact; execution on a specific host is not yet evidenced.
-- Credential collection + DNS-exfiltration capability: **Supported** as capability, **Not established** as impact for any specific consumer (see evidentiary boundary below).
+- Valid npm publishing authority is **Confirmed**, because the affected versions were published through an authoritative channel.
+- Malicious npm versions are **Confirmed**: `9.1.6`, `9.2.3`, and `12.0.1` contain a malicious CommonJS path (`node-ipc.cjs`) with an appended obfuscated IIFE.
+- Vulnerable dependency resolution is **Supported**, because consumers that resolve these versions load the malicious artifact; no victim-specific telemetry is on file to confirm a given consumer did so.
+- The compromised CommonJS execution path is **Plausible**: the code path is present in the artifact, but execution on a specific host is not yet evidenced.
+- Credential collection and DNS-exfiltration capability is **Supported** as a capability but **Not established** as impact for any specific consumer (see evidentiary boundary below).
 
 Every arrow after package publication remains conditional on the consumer environment until victim-specific telemetry is available.
 
@@ -36,11 +36,11 @@ Every arrow after package publication remains conditional on the consumer enviro
 
 Expired/lapsed maintainer email domain -> new registration -> mailbox operation -> npm account recovery -> use of publisher authority.
 
-- Expired/lapsed maintainer email domain: **Confirmed** — the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident.
-- New registration: **Supported** — a May 7 registration is directly supported by the evidence.
-- Mailbox operation: **Supported** — a later operational mailbox is directly supported by the evidence.
-- npm account recovery: **Not established** — the evidence does not contain the npm recovery event required to close this link.
-- Use of publisher authority: **Plausible** — inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
+- The expired/lapsed maintainer email domain is **Confirmed**: the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident.
+- A new registration is **Supported**, because a May 7 registration is directly supported by the evidence.
+- Mailbox operation is **Supported**, because a later operational mailbox is directly supported by the evidence.
+- npm account recovery is **Not established**, because the evidence does not contain the npm recovery event required to close this link.
+- Use of publisher authority is **Plausible**: it is inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
 
 The evidence directly supports the middle observations (a May 7 registration and later operational mailbox) but does not contain the npm recovery event required to close the chain. No actor identity or victim data is asserted beyond what the evidence shows.
 

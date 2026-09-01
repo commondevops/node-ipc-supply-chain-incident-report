@@ -24,9 +24,9 @@ This contemporaneous capture materially strengthens the May 7 date. It is a snap
 
 ### Conclusions
 
-- **Current registration creation timestamp observed:** `2026-05-07T11:49:33Z` — High confidence.
-- **Exact date the prior registration expired:** Not established.
-- **Historical "re-registration" chronology before May 7:** Not fully established from the preserved evidence.
+- The current registration's creation timestamp was observed at `2026-05-07T11:49:33Z`, with high confidence.
+- The exact date the prior registration expired is not established by the preserved evidence.
+- The historical "re-registration" chronology before May 7 is not fully established from the preserved evidence.
 
 ## 2. Direct exchange with the mailbox
 
@@ -56,16 +56,16 @@ On **19 May 2026**, a preservation request was sent to Namecheap regarding `atla
 
 The request asked Namecheap to preserve:
 
-- domain registration-account details;
-- registrar login IPs and user agents;
-- account creation, recovery, and password-reset events;
-- DNS and mail-record history;
-- mailbox creation time;
-- webmail sessions;
-- SMTP submission logs;
-- DKIM signing records;
-- support/recovery records;
-- related abuse or fraud flags.
+- Domain registration-account details — would identify who registered and controlled the domain.
+- Registrar login IPs and user agents — could place an actor at the account.
+- Account creation, recovery, and password-reset events — are central to testing whether the domain mailbox was used to recover the npm account.
+- DNS and mail-record history — would show when authoritative records were configured for the new registration.
+- Mailbox creation time — helps date when the operational mailbox came into use.
+- Webmail sessions — could tie a human operator to the mailbox.
+- SMTP submission logs — corroborate the preserved outbound relay observations.
+- DKIM signing records — support authentication of the preserved replies.
+- Support/recovery records — may document recovery actions taken on the account.
+- Related abuse or fraud flags — would indicate prior warnings to the registrar.
 
 Namecheap acknowledged receipt on 19 May and stated that the report would be reviewed.
 

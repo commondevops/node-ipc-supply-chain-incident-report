@@ -28,11 +28,11 @@ One investigator described this as a likely "Email Takeover." A later comment ex
 
 ## What the evidence does not include
 
-- npm password-reset records;
-- npm login IPs;
-- npm MFA/recovery logs;
-- a registrar account login history tying domain control to the npm publisher session;
-- human identity evidence for the mailbox operator.
+- npm password-reset records — would directly show whether a recovery was performed.
+- npm login IPs — could place an actor at the publisher account.
+- npm MFA/recovery logs — would distinguish login from recovery and show which channels were used.
+- A registrar account login history tying domain control to the npm publisher session — is needed to connect domain control to the publishing event.
+- Human identity evidence for the mailbox operator — would move attribution beyond infrastructure control.
 
 The absence of these artifacts means the chain from domain reacquisition to a concrete npm password reset is inferred, not directly observed. Where a claim rests on inference rather than a preserved record, this document marks it as plausible rather than confirmed.
 

@@ -25,18 +25,18 @@ Only steps 1-3 can be inferred from dependency/package state. Steps 4-8 require 
 
 The incident report documents collection of the following targets:
 
-- OS platform, architecture, hostname, home directory, and temporary directory
-- `uname -a`
-- Process ID and working directory
-- All environment variables
-- `/etc/hosts`
-- SSH keys and configuration
-- Shell history and profiles
-- Cloud-provider credentials and configuration
-- Kubernetes configuration
-- Application and developer configuration
-- Source-control and package-management material
-- Other files likely to contain secrets
+- OS platform, architecture, hostname, home directory, and temporary directory — establish the host's identity and layout for the operator.
+- `uname -a` — adds kernel and build details to that host profile.
+- Process ID and working directory — pin down where the process is running from.
+- All environment variables — may contain credentials, tokens, and configuration.
+- `/etc/hosts` — can reveal internal network mappings.
+- SSH keys and configuration — provide direct access to private repositories and servers.
+- Shell history and profiles — may expose commands, hosts, and inline secrets.
+- Cloud-provider credentials and configuration — grant access to cloud accounts and infrastructure.
+- Kubernetes configuration — can reach cluster workloads and secrets.
+- Application and developer configuration — often embeds connection strings and API keys.
+- Source-control and package-management material — exposes credentials for repositories and registries.
+- Other files likely to contain secrets — covers additional secret-bearing files the operator may value.
 
 This establishes **collection capability**. It does not establish which of these files actually existed on any specific victim host.
 

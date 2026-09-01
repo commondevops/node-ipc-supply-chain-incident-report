@@ -27,10 +27,10 @@ A primary record can still contain an investigator's hypothesis. The classificat
 
 ## 3. Confidence language
 
-- **Confirmed / High** - directly supported by primary evidence or multiple independent observations.
-- **Supported / Medium** - evidence is consistent and meaningful but incomplete.
-- **Plausible / Low** - a reasonable explanation, but a required causal link is absent.
-- **Not established** - the available evidence does not support the claim.
+- **Confirmed / High** means the claim is directly supported by primary evidence or multiple independent observations.
+- **Supported / Medium** means the evidence is consistent and meaningful but incomplete.
+- **Plausible / Low** means a reasonable explanation where a required causal link is absent.
+- **Not established** means the available evidence does not support the claim.
 
 ## 4. Evidence register (Appendix A)
 
