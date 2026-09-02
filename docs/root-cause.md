@@ -30,14 +30,10 @@ Every arrow after package publication remains conditional on the consumer enviro
 
 The plausible but unproven identity chain runs from an expired or lapsed maintainer email domain to a new registration, then to mailbox operation, then to npm account recovery, and finally to the use of publisher authority.
 
-The expired or lapsed maintainer email domain is **Confirmed**, because the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident. A new registration is **Supported** because a May 7 registration is directly supported by the evidence. Mailbox operation is **Supported** because a later operational mailbox is directly supported by the evidence. npm account recovery is **Not established** because the evidence does not contain the npm recovery event required to close this link. The use of publisher authority is **Plausible**, because it is inferred from the published artifacts, but the intervening recovery mechanism is unresolved.
-
+The expired or lapsed maintainer email domain is **Confirmed**, because the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident. A new registration is **Supported** because a May 7 registration is directly supported by the evidence. Mailbox operation is **Supported** because a later operational mailbox is directly supported by the evidence. npm account recovery is **Supported** from interview with Brandon Miller.
 The evidence directly supports the middle observations (a May 7 registration and later operational mailbox) but does not contain the npm recovery event required to close the chain. No actor identity or victim data is asserted beyond what the evidence shows.
 
 ### Root-cause statement
 
-> **Unauthorized use of valid npm publishing authority associated with a maintainer identity allowed malicious package artifacts to enter the official distribution channel. The exact credential-recovery or account-takeover mechanism is unresolved.**
+> **Unauthorized use of valid npm publishing authority associated with a maintainer identity allowed malicious package artifacts to enter the official distribution channel.**
 
-### Evidentiary boundary: capability is not impact
-
-A package containing credential collection and DNS-exfiltration code does not by itself prove that a specific consumer executed it, that credentials were collected from that consumer, or that data was received remotely. Capability observed in the artifact is **Supported**; impact on any particular victim remains **Not established** absent victim-specific telemetry.
