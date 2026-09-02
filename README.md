@@ -1,4 +1,4 @@
-# The Trusted npm Package That Turned Malicious
+# The Ghost in the Supply Chain
 
 **node-ipc Supply Chain Incident Report — a structured post-incident document**
 
@@ -31,20 +31,21 @@ In May 2026, three malicious node-ipc releases appeared on npm while the upstrea
 
 ## Contents
 
-1. [Incident Overview & Background](docs/overview.md)
-2. [Timeline: Forty-Eight Hours](docs/timeline.md)
-3. [Technical Attack Reconstruction](docs/technical-analysis.md)
-4. [Maintainer Identity & Publishing Path](docs/maintainer-identity.md)
-5. [Domain, Email & Registrar Evidence](docs/domain-email-registrar.md)
-6. [Root Cause Analysis](docs/root-cause.md)
-7. [Impact & Threat Model](docs/impact.md)
-8. [Indicators & Detection Opportunities](docs/indicators.md)
-9. [Remediation & Recommendations](docs/remediation.md)
-10. [Known Unknowns](docs/known-unknowns.md)
-11. [Lessons Learned](docs/lessons-learned.md)
-12. [Scope, Evidence Method & Register](docs/evidence-method.md)
-13. [Full Narrative (original long-read)](assets/full-narrative.md)
+1. [What is node-ipc?](docs/what-is-node-ipc.md)
+2. [Incident Overview & Background](docs/overview.md)
+3. [Timeline: Forty-Eight Hours](docs/timeline.md)
+4. [Technical Attack Reconstruction](docs/technical-analysis.md)
+5. [Maintainer Identity & Publishing Path](docs/maintainer-identity.md)
+6. [Domain, Email & Registrar Evidence](docs/domain-email-registrar.md)
+7. [Root Cause Analysis](docs/root-cause.md)
+8. [Impact & Threat Model](docs/impact.md)
+9. [Indicators & Detection Opportunities](docs/indicators.md)
+10. [Remediation & Recommendations](docs/remediation.md)
+11. [Known Unknowns](docs/known-unknowns.md)
+12. [Lessons Learned](docs/lessons-learned.md)
+13. [Scope, Evidence Method & Register](docs/evidence-method.md)
+14. [Common Devops & Our Involvement](docs/our-involvement.md)
 
 ## About this report
 
-This is a structured incident report built from the original long-read. The full original narrative is preserved unchanged in [full-narrative.md](assets/full-narrative.md).
+This is a structured, evidence-based incident report. Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Scope, Evidence Method & Register for the evidence register and method.

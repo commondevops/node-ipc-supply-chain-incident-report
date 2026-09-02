@@ -8,13 +8,13 @@
 
 In May 2026, three malicious `node-ipc` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
-On May 14, 2026, a developer opening the `node-ipc` project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm was no longer telling the same story.
+On May 14, 2026, a developer opening the `node-ipc` project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm no longer matched what the source page showed.
 
 That day, three malicious versions of `node-ipc`—`9.1.6`, `9.2.3`, and `12.0.1`—appeared through the official npm distribution channel. The discrepancy was small enough to fit inside a version number, yet large enough to expose one of the software industry's most consequential assumptions: the code developers inspect and the package they install are not necessarily governed by the same systems, credentials, or trust relationships.
 
 For most developers, the distinction is almost invisible. GitHub is where a project is read, discussed, and reviewed; npm is where the package is retrieved. In ordinary use, they feel like two windows onto the same thing. The `node-ipc` incident made clear that they are not. A source repository can remain unchanged while the distribution path around it changes completely.
 
-That was what made the incident larger than a story about malicious code. The package name remained familiar, the installation command remained familiar, and the project developers recognized was still there. What had changed was the chain of authority behind the package being delivered to them.
+That was what made the incident larger than a single case of malicious code. The package name remained familiar, the installation command remained familiar, and the project developers recognized was still there. What had changed was the chain of authority behind the package being delivered to them.
 
 Modern software depends on that chain. Applications are assembled from libraries, frameworks, build tools, and packages maintained by people all over the world. Every installation carries a quiet promise that the software arriving through a registry is the software its maintainers intended to publish.
 

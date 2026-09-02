@@ -11,6 +11,7 @@ mkdir -p "$OUT_DIR"
 
 files=(
   "$ROOT/README.md"
+  "$ROOT/docs/what-is-node-ipc.md"
   "$ROOT/docs/overview.md"
   "$ROOT/docs/timeline.md"
   "$ROOT/docs/technical-analysis.md"
@@ -23,7 +24,7 @@ files=(
   "$ROOT/docs/known-unknowns.md"
   "$ROOT/docs/lessons-learned.md"
   "$ROOT/docs/evidence-method.md"
-  "$ROOT/assets/full-narrative.md"
+  "$ROOT/docs/our-involvement.md"
 )
 
 for f in "${files[@]}"; do

@@ -2,7 +2,7 @@
 
 > This page preserves the original long-read verbatim. For the structured incident report, see [the report index](../README.md).
 
-# The Trusted npm Package That Turned Malicious
+# The Ghost in the Supply Chain
 
 In May 2026, three malicious node-ipc releases appeared on npm while the upstream project still showed 12.0.0. The gap exposed how much modern software depends on trust outside the code we can see.
 
