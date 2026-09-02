@@ -1,7 +1,5 @@
 # Maintainer Identity & Publishing Path
 
-[← Back to report index](../README.md)
-
 ## Introduction
 
 The strongest public connection between the malicious npm artifacts and a maintainer identity appears in the GitHub investigation thread. Investigators reported that the malicious tarballs contained:

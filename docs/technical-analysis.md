@@ -1,7 +1,5 @@
 # Technical Attack Reconstruction
 
-[← Back to report index](../README.md)
-
 This section reconstructs the technical behavior documented in the public incident record for the affected `node-ipc` releases (`9.1.6`, `9.2.3`, `12.0.1`). It separates what the code is demonstrated to do from what cannot be concluded without host, DNS, or receiver-side evidence.
 
 ## 1. Entry point and execution condition

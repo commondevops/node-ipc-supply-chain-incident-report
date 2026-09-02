@@ -1,7 +1,5 @@
 # Lessons Learned
 
-[← Back to report index](../README.md)
-
 ## The familiar thing at the door
 
 What makes the `node-ipc` incident notable is how ordinary its starting point was. There was no need for the package name to change, no need for developers to adopt an unfamiliar tool, and no need for the upstream project to suddenly look obviously hostile. The attack could benefit from trust that had already been earned.

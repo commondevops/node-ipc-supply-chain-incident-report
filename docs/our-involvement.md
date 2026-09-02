@@ -1,7 +1,5 @@
 # Common Devops & Our Involvement
 
-[← Back to report index](../README.md)
-
 ## Who we are
 
 This report was produced by Common Devops. We are the authors of this incident investigation.

@@ -1,7 +1,5 @@
 # Known Unknowns
 
-[← Back to report index](../README.md)
-
 The following questions remain open; the current evidence does not justify closing these gaps through inference.
 
 What exact npm authentication or recovery event preceded the malicious publication? No npm login or recovery telemetry is on file to identify that event.

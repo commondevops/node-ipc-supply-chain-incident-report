@@ -1,7 +1,5 @@
 # Timeline: Forty-Eight Hours
 
-[← Back to report index](../README.md)
-
 Once researchers recognized the malicious releases, the incident moved quickly. It went from malicious publication to public investigation and containment in roughly two days.
 
 ## Master Timeline

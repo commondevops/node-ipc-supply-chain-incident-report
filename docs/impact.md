@@ -1,7 +1,5 @@
 # Impact & Threat Model
 
-[← Back to report index](../README.md)
-
 ## Why developer machines are such valuable ground
 
 A developer laptop is rarely just a laptop, and a CI runner is rarely just a machine that runs tests. These environments sit at the intersection of an organization's code, credentials, infrastructure, and release process. They may be able to reach private repositories, cloud services, deployment platforms, package registries, Kubernetes clusters, internal databases, and production-adjacent systems.

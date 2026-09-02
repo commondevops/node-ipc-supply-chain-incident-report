@@ -1,7 +1,5 @@
 # Scope, Evidence Method & Register
 
-[← Back to report index](../README.md)
-
 ## 1. Scope
 
 This report reconstructs four related questions. It asks what malicious behavior was present in the affected `node-ipc` npm releases. It asks what evidence connects the publication event to a maintainer publishing identity. It asks what the independent domain, DNS, and email investigation established. It also asks which causal claims are supported, plausible, or still unresolved.

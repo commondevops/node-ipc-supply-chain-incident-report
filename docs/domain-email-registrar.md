@@ -1,7 +1,5 @@
 # Domain, Email & Registrar Evidence
 
-[← Back to report index](../README.md)
-
 ## 1. `atlantis-software.net` registration
 
 The contemporaneous WHOIS capture preserved by the investigator records the details of the domain visible during the incident.

@@ -1,7 +1,5 @@
 # Remediation & Recommendations
 
-[← Back to report index](../README.md)
-
 No development team can realistically inspect every line of every dependency it uses, and perfect inspection would not solve the larger problem anyway. Software changes continuously. Maintainers change, releases change, account ownership changes, infrastructure changes, and dependencies acquire dependencies of their own. Security has to survive those changes rather than assume they will never happen.
 
 ## Corrective & Preventive Actions

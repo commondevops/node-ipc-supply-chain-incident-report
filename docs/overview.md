@@ -1,7 +1,5 @@
 # Incident Overview & Background
 
-[← Back to report index](../README.md)
-
 ## The source-vs-distribution gap
 
 ![Source repository vs distribution channel divergence](https://comdevopsai.github.io/node-ipc-post-incident/01-source-vs-distribution.png)

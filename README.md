@@ -15,20 +15,6 @@
 
 In May 2026, three malicious node-ipc releases appeared on npm while the upstream project still showed 12.0.0. The malicious versions were 9.1.6, 9.2.3, and 12.0.1, published through the official npm distribution channel. The gap exposed how much modern software depends on trust outside the code we can see.
 
-## Key Facts
-
-| Field | Value |
-| --- | --- |
-| Package | node-ipc |
-| Upstream version | 12.0.0 |
-| Malicious versions | 9.1.6, 9.2.3, 12.0.1 |
-| Incident date | May 14, 2026 |
-| Contained by | May 15, 2026 |
-| Detection | Public GitHub issue #15 |
-| Root cause | Dormant maintainer identity tied to lapsed domain atlantis-software.net |
-| 12.0.1 shasum | fe5d107b9d285327af579259a32977c4f475fa26 |
-| Malicious entry point | node-ipc.cjs (CommonJS); ESM node-ipc.js clean |
-
 ## Contents
 
 1. [What is node-ipc?](docs/what-is-node-ipc.md)
@@ -45,6 +31,20 @@ In May 2026, three malicious node-ipc releases appeared on npm while the upstrea
 12. [Lessons Learned](docs/lessons-learned.md)
 13. [Scope, Evidence Method & Register](docs/evidence-method.md)
 14. [Common Devops & Our Involvement](docs/our-involvement.md)
+
+## Key Facts
+
+| Field | Value |
+| --- | --- |
+| Package | node-ipc |
+| Upstream version | 12.0.0 |
+| Malicious versions | 9.1.6, 9.2.3, 12.0.1 |
+| Incident date | May 14, 2026 |
+| Contained by | May 15, 2026 |
+| Detection | Public GitHub issue #15 |
+| Root cause | Dormant maintainer identity tied to lapsed domain atlantis-software.net |
+| 12.0.1 shasum | fe5d107b9d285327af579259a32977c4f475fa26 |
+| Malicious entry point | node-ipc.cjs (CommonJS); ESM node-ipc.js clean |
 
 ## About this report
 

@@ -1,7 +1,5 @@
 # Root Cause Analysis
 
-[← Back to report index](../README.md)
-
 ## Summary
 
 Publication metadata pointed investigators toward a dormant maintainer identity associated with an address at `atlantis-software.net`. The domain had lapsed and later returned under new control, and investigators found working mail infrastructure for it after the incident. Publishing authority can outlive the person or organization that originally created it.
