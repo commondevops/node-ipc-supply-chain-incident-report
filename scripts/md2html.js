@@ -515,6 +515,10 @@ img { max-width: 100%; }
 }
 @media (max-width: 600px) {
   body { padding: 12px; }
+}
+@media print {
+  html { font-size: 12px; }
+  body { padding: 0; max-width: 100%; }
 }`;
 
 /* ------------------------------------------------------------------ *
