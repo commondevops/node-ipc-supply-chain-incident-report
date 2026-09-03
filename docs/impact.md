@@ -18,6 +18,8 @@ The `node-ipc` incident crossed layers that software teams manage as separate pr
 
 Seen that way, `node-ipc` was not only an npm incident. It was an identity incident, a distribution incident, and a developer-security incident. Each layer inherited confidence from the one before it. The package was trusted partly because the registry delivered it; the registry release was trusted partly because valid publishing authority had produced it; the code was allowed to run because all of those earlier assumptions normally hold.
 
+For a broader threat-model perspective on how supply-chain compromises propagate across trust boundaries, see [StepSecurity's writeup](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack).
+
 This is both the strength and the weakness of modern software reuse. Developers can build extraordinary systems because they do not have to renegotiate every trust relationship from first principles each time they install a package. But the same efficiency means risk can also be inherited.
 
 The answer is not to distrust open source. Modern software development would be nearly impossible without it. The more useful lesson is to stop thinking of trust as permanent. A package can deserve confidence for years and still become dangerous if control of its publishing path changes.

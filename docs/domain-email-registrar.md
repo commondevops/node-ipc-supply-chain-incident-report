@@ -26,7 +26,7 @@ The evidentiary value here is **operational mailbox control**, not confession. T
 
 The original-message export for the final reply records:
 
-The Message-ID was `<1535103746.754187.1778957015937@privateemail.com>`. It was created on 16 May 2026 at 1:43 PM. The From field was `a.tiertant@atlantis-software.net`. The mailer was Open-Xchange Mailer v7.10.6-Rev91. SPF was **PASS** with IP `198.54.127.77`. DKIM was **PASS** with domain `atlantis-software.net`. DMARC was **FAIL**.
+The Message-ID was `<1535103746.754187.1778957015937@privateemail.com>`. It was created on 16 May 2026 at 1:43 PM. The From field was `a.tiertant@atlantis-software.net`. The mailer was Open-Xchange Mailer v7.10.6-Rev91. [SPF](https://datatracker.ietf.org/doc/html/rfc7208) was **PASS** with IP `198.54.127.77`. [DKIM](https://datatracker.ietf.org/doc/html/rfc6375) was **PASS** with domain `atlantis-software.net`. [DMARC](https://datatracker.ietf.org/doc/html/rfc7489) was **FAIL**.
 
 SPF/DKIM success is meaningful because it shows the message was sent through infrastructure authorized for the domain and carried a valid domain signature at that time. It does **not** authenticate the human identity of the sender. Domain control and identity are separate propositions.
 

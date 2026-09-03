@@ -16,10 +16,12 @@ The child environment marker `__ntw=1` is one of the environment guards reported
 
 The highest-value defensive data sources are:
 
-1. Dependency lockfiles, SBOMs, and package caches — let defenders confirm which environments resolved an affected version.
+1. Dependency lockfiles, [SBOMs](https://spdx.dev), and package caches — let defenders confirm which environments resolved an affected version.
 2. Process/module telemetry identifying CommonJS loads — can show whether the compromised entry point was actually loaded.
 3. File-access telemetry around SSH/cloud/Kubernetes credentials — reveals whether credential files were read.
 4. Temporary-directory creation/deletion — matches the `nt-*` staging behavior.
 5. DNS logs retaining full query names — are required because the query name itself carries the exfiltrated data.
 6. Firewall telemetry showing DNS outside approved resolvers — catches queries directed at the C2 host.
 7. Credential-provider logs showing anomalous reuse after potential exposure — can detect whether exposed credentials were later used.
+
+For detection signals and a package-level timeline, see [Socket.dev's analysis](https://socket.dev/blog/node-ipc-package-compromised).

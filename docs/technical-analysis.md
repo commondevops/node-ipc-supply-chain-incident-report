@@ -37,6 +37,8 @@ This design minimizes the number of independent outbound operations: many local 
 
 The reconstructed code uses DNS query names as the data channel. It divides encoded archive material into chunks and constructs a header/data/footer sequence using three short prefixes.
 
+For an independent breakdown of this payload and its DNS exfiltration mechanism, see [Datadog Security Labs' malware analysis](https://securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/).
+
 The `xh` prefix denotes the header, the `xd` prefix carries the data chunks, and the `xf` prefix denotes the footer.
 
 The issue discussion identifies `sh.azurestaticprovider.net` as the resolver/C2-related host and `bt.node.js` as the query suffix used by the reconstructed protocol.

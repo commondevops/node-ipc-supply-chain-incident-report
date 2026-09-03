@@ -6,7 +6,7 @@
 
 In May 2026, three malicious `[node-ipc](https://www.npmjs.com/package/node-ipc)` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
-On May 14, 2026, a developer opening the `node-ipc` project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm no longer matched what the source page showed.
+On May 14, 2026, a developer opening the [node-ipc](https://github.com/RIAEvangelist/node-ipc) project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm no longer matched what the source page showed.
 
 That day, three malicious versions of `node-ipc`—`9.1.6`, `9.2.3`, and `12.0.1`—appeared through the official npm distribution channel. The discrepancy was small enough to fit inside a version number, yet large enough to expose one of the software industry's most consequential assumptions: the code developers inspect and the package they install are not necessarily governed by the same systems, credentials, or trust relationships.
 
