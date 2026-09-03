@@ -1,6 +1,6 @@
-# The Ghost in the Supply Chain
+# node-ipc Supply Chain Incident Report
 
-**node-ipc Supply Chain Incident Report — a structured post-incident document**
+**A structured, evidence-based post-incident report**
 
 | Field | Value |
 | --- | --- |
@@ -21,7 +21,7 @@ In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) 
 
 1. [What is node-ipc?](docs/what-is-node-ipc.md)
 2. [Incident Overview & Background](docs/overview.md)
-3. [Timeline: Forty-Eight Hours](docs/timeline.md)
+3. [Timeline](docs/timeline.md)
 
 ### Part II — Investigation & Attribution
 

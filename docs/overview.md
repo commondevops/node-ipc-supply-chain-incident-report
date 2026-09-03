@@ -6,21 +6,19 @@
 
 In May 2026, three malicious `[node-ipc](https://www.npmjs.com/package/node-ipc)` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
-On May 14, 2026, a developer opening the [node-ipc](https://github.com/RIAEvangelist/node-ipc) project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm no longer matched what the source page showed.
+On May 14, 2026, the upstream [node-ipc](https://github.com/RIAEvangelist/node-ipc) repository on GitHub still pointed to version `12.0.0` and appeared much as it had before. The software arriving through npm, however, no longer matched what the source page showed.
 
-That day, three malicious versions of `node-ipc`—`9.1.6`, `9.2.3`, and `12.0.1`—appeared through the official npm distribution channel. The discrepancy was small enough to fit inside a version number, yet large enough to expose one of the software industry's most consequential assumptions: the code developers inspect and the package they install are not necessarily governed by the same systems, credentials, or trust relationships.
+That day, three malicious versions of `node-ipc`—`9.1.6`, `9.2.3`, and `12.0.1`—appeared through the official npm distribution channel. The difference was confined to a version number, but it reflected a significant gap between the code developers inspect and the package they install: the two are not necessarily governed by the same systems, credentials, or trust relationships.
 
 For most developers, the distinction is almost invisible. GitHub is where a project is read, discussed, and reviewed; npm is where the package is retrieved. In ordinary use, they feel like two windows onto the same thing. The `node-ipc` incident made clear that they are not. A source repository can remain unchanged while the distribution path around it changes completely.
 
 That was what made the incident larger than a single case of malicious code. The package name remained familiar, the installation command remained familiar, and the project developers recognized was still there. What had changed was the chain of authority behind the package being delivered to them.
 
-Modern software depends on that chain. Applications are assembled from libraries, frameworks, build tools, and packages maintained by people all over the world. Every installation carries a quiet promise that the software arriving through a registry is the software its maintainers intended to publish.
+Modern software depends on that chain. Applications are assembled from libraries, frameworks, build tools, and packages maintained by people all over the world. Each installation assumes that the software delivered through a registry is the software its maintainers intended to publish.
 
-**The `node-ipc` incident began when that promise broke.**
+## Scope of the compromise
 
-## The package was only the beginning
-
-Open-source software works because developers do not build everything themselves. A modern application may rely on hundreds or thousands of components maintained by people the application team will never meet. That arrangement is one of software's great force multipliers: small teams can build enormous systems because they inherit years of work from the ecosystem around them.
+Open-source software works because developers do not build everything themselves. A modern application may rely on hundreds or thousands of components maintained by people the application team will never meet. This arrangement lets small teams build large systems by inheriting years of work from the ecosystem around them.
 
 They inherit something else as well. Every dependency brings assumptions about who controls it, how releases are published, and what the package will be allowed to do once it reaches a developer workstation or CI environment. Most of those assumptions remain invisible until one of them fails.
 
@@ -32,7 +30,7 @@ That proximity is what gave the compromise its reach. A third-party package runn
 
 A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
 
-> **The package was not valuable because of what it contained. It was valuable because of where developers were willing to run it.**
+The value of the target lay not in the package contents but in the environments that would execute it.
 
 ## Incident record
 

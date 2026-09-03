@@ -4,7 +4,7 @@
 
 `node-ipc` is an open-source JavaScript library for inter-process communication (IPC). It lets separate Node.js processes exchange messages and coordinate, a common need for multi-process applications, CLI tooling, and local services. The public project lives at `RIAEvangelist/node-ipc`. The maintainer has also published companion variants, including a Rust implementation and a C# implementation, so the same IPC capability can bridge JavaScript with other runtimes.
 
-## Why it matters
+## Why it is widely deployed
 
 `node-ipc` is one of the most widely adopted packages in the Node.js ecosystem. It has been widely reported to have accumulated over 2 billion downloads on npm, with very high weekly download volume (per the maintainer interview and public reporting; the exact figure is not part of the preserved evidence for this report).
 

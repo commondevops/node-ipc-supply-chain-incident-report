@@ -1,6 +1,6 @@
-# Timeline: Forty-Eight Hours
+# Timeline
 
-Once researchers recognized the malicious releases, the incident moved quickly. It went from malicious publication to public investigation and containment in two days.
+After researchers identified the malicious releases, the incident progressed quickly, moving from malicious publication to public investigation and containment within two days.
 
 ## Master Timeline
 
@@ -48,8 +48,8 @@ Namecheap acknowledged the report (evidence strength: High) and stated that it w
 
 Namecheap said the allegation could not be validated from the supplied evidence and that legal process is required for preservation (evidence strength: High). It had investigated "to the extent of our capabilities," requested additional evidence, and stated that preservation requests are processed upon receipt of a U.S. court order or subpoena by the Senior Legal department.
 
-![Two-day shockwave timeline of the node-ipc incident](../assets/images-web/02-two-day-shockwave.jpeg)
+![Two-day timeline of the node-ipc incident](../assets/images-web/02-two-day-shockwave.jpeg)
 
-## Why the speed matters
+## Containment timing
 
-Trust accumulates slowly while compromise can happen all at once. A change in publishing authority can alter what a familiar name delivers within hours.
+Trust is accumulated gradually, but a single change in publishing authority can alter what a familiar package name delivers within hours.

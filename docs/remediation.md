@@ -18,8 +18,8 @@ Require phishing-resistant MFA for publisher accounts where available, to reduce
 
 Establish formal publisher lifecycle governance, and treat publishing access for critical packages like production access—limited, reviewed, and removed when it is no longer necessary. Create rapid package-takedown and maintainer-notification procedures, to shorten the time a malicious release stays available. Require provenance or verifiable build relationships for critical packages, so consumers can confirm a release matches its claimed source. Perform exercises that treat dependency compromise as both a software and identity incident, because the publishing path—not just the code—is what must be defended.
 
-## From package inventory to trust-path analysis
+## Trust-path analysis
 
 A dependency incident should therefore trigger a broader question than "Which version did we install?" Teams also need to ask what the package could reach, what credentials were present, where those credentials led, and what assumptions allowed the package to run there in the first place.
 
-That shift—from package inventory to trust-path analysis—is one of the most useful lessons from the incident.
+Moving from package inventory to trust-path analysis is a key recommendation from this incident.
