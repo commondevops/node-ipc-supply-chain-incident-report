@@ -30,6 +30,8 @@ The absence of these artifacts means the chain from domain reacquisition to a co
 
 A contemporaneous investigator screenshot preserved the GitHub profile associated with `atiertant` during the investigation (source: original May 2026 screenshot archive). This capture is contextual evidence only. It establishes how the account and its associated projects appeared at the time, but it does not prove that the GitHub account itself was compromised or used to publish the npm malware.
 
+![GitHub profile of atiertant (contemporaneous screenshot)](../assets/images/github-atiertant-profile.png)
+
 ## Defensible causal statement
 
 > The incident was enabled by valid npm publishing authority associated with a maintainer identity. Domain reacquisition and mailbox control provide a plausible account-recovery path, but the exact mechanism of npm account takeover remains unresolved.
