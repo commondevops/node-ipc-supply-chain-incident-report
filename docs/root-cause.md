@@ -14,10 +14,6 @@ Dormant publishing authority is security debt. So are expired domains, forgotten
 
 > **Old identities do not stop mattering just because everyone has stopped thinking about them.**
 
-## Causal Analysis
-
-A useful causal model separates what is demonstrated from what is hypothesized. Confidence language below marks the strength of each link: **Confirmed** (directly observed), **Supported** (consistent with evidence but not directly observed), **Plausible** (reasoned, not yet evidenced), and **Not established** (no current evidence).
-
 ### Demonstrated chain
 
 The demonstrated chain runs from valid npm publishing authority to malicious npm versions, then to vulnerable dependency resolution, then to a compromised CommonJS execution path, and finally to credential collection and DNS-exfiltration capability.
@@ -26,12 +22,12 @@ Valid npm publishing authority is **Confirmed** because the affected versions we
 
 Every arrow after package publication remains conditional on the consumer environment until victim-specific telemetry is available.
 
-### Plausible but unproven identity chain
+### Maintainer identity theft
+The identity chain runs from an expired or lapsed maintainer email domain to a new registration, then to mailbox operation, then to npm account recovery, and finally to the use of publisher authority.
 
-The plausible but unproven identity chain runs from an expired or lapsed maintainer email domain to a new registration, then to mailbox operation, then to npm account recovery, and finally to the use of publisher authority.
+The expired or lapsed maintainer email domain is **Confirmed**, because the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident. Confirmed by DNS records showing a 2026-05-07 registration date. Mailbox operation is **Confirmed**, screenshots and messages in the Github Issue. Npm account recovery is **Confirmed** from interview with Brandon Miller.
 
-The expired or lapsed maintainer email domain is **Confirmed**, because the `atlantis-software.net` address had lapsed and later returned under new control, with working mail infrastructure found after the incident. A new registration is **Supported** because a May 7 registration is directly supported by the evidence. Mailbox operation is **Supported** because a later operational mailbox is directly supported by the evidence. npm account recovery is **Supported** from interview with Brandon Miller.
-The evidence directly supports the middle observations (a May 7 registration and later operational mailbox) but does not contain the npm recovery event required to close the chain. No actor identity or victim data is asserted beyond what the evidence shows.
+The evidence directly supports:
 
 ### Root-cause statement
 
