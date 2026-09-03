@@ -383,8 +383,12 @@ function renderSection(filePath, sectionId) {
   const firstH1 = headings.find((h) => h.level === 1);
   const title = firstH1 ? firstH1.text : baseName;
 
+  const isPart = /^part-\d+\.md$/.test(baseName);
+  const openTag = isPart
+    ? `<section id="${sectionId}" class="part-divider" data-title="${escapeHtml(title)}">`
+    : `<section id="${sectionId}" data-title="${escapeHtml(title)}">`;
   return {
-    html: `<section id="${sectionId}" data-title="${escapeHtml(title)}">\n${bodyHtml}\n</section>`,
+    html: `${openTag}\n${bodyHtml}\n</section>`,
   };
 }
 
@@ -446,6 +450,15 @@ section h1 {
   font-size: 1.8rem;
   border-bottom: 2px solid var(--border);
   padding-bottom: 6px;
+  color: var(--accent);
+}
+section.part-divider { margin-top: 56px; }
+section.part-divider h1 {
+  font-size: 2rem;
+  border-bottom: none;
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 14px;
+  margin-top: 0;
   color: var(--accent);
 }
 h2 { font-size: 1.4rem; margin-top: 28px; }
