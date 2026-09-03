@@ -423,13 +423,13 @@ function processFiles(files) {
  * ------------------------------------------------------------------ */
 
 const CSS = `:root {
-  --bg: #030906;
-  --fg: #d7ffe0;
-  --muted: #7fbf8f;
-  --accent: #00ff41;
-  --border: #1f4d2b;
-  --code-bg: #071f10;
-  --pre-bg: #04130a;
+  --bg: #0a0f1a;
+  --fg: #e2e8f0;
+  --muted: #8899b4;
+  --accent: #4a9eff;
+  --border: #1e3a5f;
+  --code-bg: #111827;
+  --pre-bg: #0d1220;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--bg); }
@@ -439,7 +439,7 @@ body {
   padding: 24px;
   line-height: 1.6;
   color: var(--fg);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .report-header { margin-bottom: 16px; }
 .report-header h1 {
@@ -490,7 +490,7 @@ blockquote {
   margin-left: 0;
   padding-left: 16px;
   border-left: 4px solid var(--accent);
-  color: #9fd8ab;
+  color: #93b0d4;
 }
 table {
   border-collapse: collapse;
@@ -503,8 +503,8 @@ th, td {
   text-align: left;
   vertical-align: top;
 }
-thead { background: #072312; color: var(--accent); }
-tbody tr:nth-child(even) { background: #051a0e; }
+thead { background: #111d33; color: #4a9eff; }
+tbody tr:nth-child(even) { background: #0f1729; }
 img { max-width: 100%; }
 .report-footer {
   margin-top: 48px;
