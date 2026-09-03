@@ -11,42 +11,15 @@ This report reconstructs the technical behavior, the attribution evidence, the r
 
 ## Contents
 
-1. [Background](docs/01-background.md)
-   1. What is node-ipc?
-   2. The source-vs-distribution gap
-2. [Incident Overview](docs/02-incident-overview.md)
-   1. Incident record
-   2. Timeline
-3. [Impact Assessment](docs/03-impact.md)
-   1. Why the developer environment is the target
-   2. How trust propagates through the supply chain
-   3. Capability vs impact & exposure states
-4. [Technical Analysis](docs/04-technical-analysis.md)
-   1. Entry point and execution condition
-   2. Reconnaissance and credential collection
-   3. Staging and encoding
-   4. DNS exfiltration design
-   5. Process behavior and cleanup
-   6. C2 and DNS infrastructure investigation
-5. [Attribution & Evidence](docs/05-attribution.md)
-   1. Maintainer identity & publishing path
-   2. Domain, email & registrar evidence
-6. [Root Cause Analysis](docs/06-root-cause.md)
-   1. Unmonitored identity infrastructure
-   2. Root-cause statement
-7. [Detection & Indicators](docs/07-detection.md)
-   1. Package and file indicators
-   2. Runtime indicators
-   3. Network indicators
-   4. Detection priorities
-8. [Remediation & Recommendations](docs/08-remediation.md)
-   1. Corrective & Preventive Actions
-   2. Trust-path analysis
-9. [Lessons Learned](docs/09-lessons-learned.md)
-   1. Exploiting existing trust
-   2. Trust is a property of the supply chain, not the package name
-   3. Findings at a Glance
-   4. Conclusion
+1. [Background](docs/01-background.md): node-ipc overview and the source-vs-distribution gap
+2. [Incident Overview](docs/02-incident-overview.md): Timeline and record of the three malicious releases
+3. [Impact Assessment](docs/03-impact.md): How trust propagates and why developer environments are targeted
+4. [Technical Analysis](docs/04-technical-analysis.md): Malware behavior from entry point through C2 infrastructure
+5. [Attribution & Evidence](docs/05-attribution.md): Maintainer identity, domain evidence, and publishing path
+6. [Root Cause Analysis](docs/06-root-cause.md): Dormant identity tied to lapsed domain enabled the attack
+7. [Detection & Indicators](docs/07-detection.md): Package, runtime, and network indicators with detection priorities
+8. [Remediation & Recommendations](docs/08-remediation.md): Corrective actions and trust-path hardening recommendations
+9. [Lessons Learned](docs/09-lessons-learned.md): Supply-chain trust properties and findings at a glance
 
 ### Appendices
 
