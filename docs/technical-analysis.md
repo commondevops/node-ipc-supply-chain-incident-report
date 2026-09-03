@@ -59,10 +59,10 @@ The captured WHOIS result records the details of the domain as observed during t
 
 The creation date is 2026-05-14T07:26:10Z, the registrar is NICENIC INTERNATIONAL GROUP CO., LIMITED, the nameservers are `NS3.MY-NDNS.COM` and `NS4.MY-NDNS.COM`, and the registrant is privacy-redacted.
 
-![WHOIS capture of azurestaticprovider.net (created 2026-05-14)](../assets/images/azurestaticprovider-whois.png)
+![WHOIS capture of azurestaticprovider.net (created 2026-05-14)](../assets/images-web/azurestaticprovider-whois.jpeg)
 
 The creation timestamp falls on the same date as the malicious `node-ipc` publication. The same investigation captured DNS responses for the domain and its authoritative nameserver set.
 
-![DNS responses for azurestaticprovider.net](../assets/images/azurestaticprovider-dns.png)
+![DNS responses for azurestaticprovider.net](../assets/images-web/azurestaticprovider-dns.jpeg)
 
 The timing is suspicious and technically relevant, but timing alone does not establish operator identity. Likewise, later DNS misconfiguration or inconsistent referrals cannot prove evasive intent.

@@ -48,7 +48,7 @@ Namecheap acknowledged the report (evidence strength: High) and stated that it w
 
 Namecheap said the allegation could not be validated from the supplied evidence and that legal process is required for preservation (evidence strength: High). It had investigated "to the extent of our capabilities," requested additional evidence, and stated that preservation requests are processed upon receipt of a U.S. court order or subpoena by the Senior Legal department.
 
-![Two-day shockwave timeline of the node-ipc incident](../assets/images/02-two-day-shockwave.png)
+![Two-day shockwave timeline of the node-ipc incident](../assets/images-web/02-two-day-shockwave.jpeg)
 
 ## Why the speed matters
 

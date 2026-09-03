@@ -30,7 +30,7 @@ The absence of these artifacts means the chain from domain reacquisition to a co
 
 A contemporaneous investigator screenshot preserved the GitHub profile associated with `atiertant` during the investigation (source: original May 2026 screenshot archive). This capture is contextual evidence only. It establishes how the account and its associated projects appeared at the time, but it does not prove that the GitHub account itself was compromised or used to publish the npm malware.
 
-![GitHub profile of atiertant (contemporaneous screenshot)](../assets/images/github-atiertant-profile.png)
+![GitHub profile of atiertant (contemporaneous screenshot)](../assets/images-web/github-atiertant-profile.jpeg)
 
 ## Defensible causal statement
 

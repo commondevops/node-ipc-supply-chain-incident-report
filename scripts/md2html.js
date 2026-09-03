@@ -131,7 +131,7 @@ function inlineRender(text) {
     (m, alt, url) => {
       // Rewrite relative image paths to images/filename for dist/ serving
       let src = url;
-      const imgMatch = url.match(/(?:^|\/)(images|assets\/images)\/([^/]+)$/);
+      const imgMatch = url.match(/(?:^|\/)(images|assets\/images(?:-web)?)\/([^/]+)$/);
       if (imgMatch) {
         src = `images/${imgMatch[2]}`;
       }

@@ -14,7 +14,7 @@ A useful analogy is not a thief breaking into every building on a street, but so
 
 The `node-ipc` incident crossed layers that software teams manage as separate problems. A maintainer identity can possess publishing rights. Publishing rights determine what appears in a registry. The registry supplies software to developer machines and CI systems. Those systems contain credentials and configuration. Those credentials can lead to larger environments.
 
-![Trust chain diagram](../assets/images/04-trust-chain.png)
+![Trust chain diagram](../assets/images-web/04-trust-chain.jpeg)
 
 Seen that way, `node-ipc` was not only an npm incident. It was an identity incident, a distribution incident, and a developer-security incident. Each layer inherited confidence from the one before it. The package was trusted partly because the registry delivered it; the registry release was trusted partly because valid publishing authority had produced it; the code was allowed to run because all of those earlier assumptions normally hold.
 

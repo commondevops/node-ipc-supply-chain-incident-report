@@ -2,7 +2,7 @@
 
 ## The source-vs-distribution gap
 
-![Source repository vs distribution channel divergence](../assets/images/01-source-vs-distribution.png)
+![Source repository vs distribution channel divergence](../assets/images-web/01-source-vs-distribution.jpeg)
 
 In May 2026, three malicious `[node-ipc](https://www.npmjs.com/package/node-ipc)` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
@@ -28,7 +28,7 @@ The malicious `node-ipc` releases were designed to inspect developer and CI envi
 
 That proximity is what gave the compromise its reach. A third-party package running in a development environment may sit only a few steps away from private repositories, cloud accounts, deployment infrastructure, and production-adjacent systems. The dangerous part of a malicious dependency is therefore not only the code inside it, but the environment that agrees to run it.
 
-![Multiple layers of trust around node-ipc](../assets/images/03-multiple-layers-of-trust.png)
+![Multiple layers of trust around node-ipc](../assets/images-web/03-multiple-layers-of-trust.jpeg)
 
 A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
 
