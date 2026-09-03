@@ -2,7 +2,7 @@
 
 ## The familiar thing at the door
 
-What makes the `node-ipc` incident notable is how ordinary its starting point was. There was no need for the package name to change, no need for developers to adopt an unfamiliar tool, and no need for the upstream project to suddenly look obviously hostile. The attack could benefit from trust that had already been earned.
+The `[node-ipc](https://www.npmjs.com/package/node-ipc)` incident showed how ordinary its starting point was. There was no need for the package name to change, no need for developers to adopt an unfamiliar tool, and no need for the upstream project to suddenly look obviously hostile. The attack could benefit from trust that had already been earned.
 
 That is the defining advantage of a software supply-chain attack. Instead of forcing its way through every organization's front door, it can compromise something organizations have already decided to invite inside.
 
@@ -29,3 +29,5 @@ The malicious behavior itself is technically well supported: compromised CommonJ
 Those facts make an email-based account-recovery compromise plausible. They do not prove it.
 
 The strongest report therefore stops at the evidence boundary: valid npm publishing authority was abused, and the exact acquisition mechanism remains unresolved. That distinction is not a weakness in the analysis — it is what makes the analysis reproducible.
+
+For independent analyses of this incident, see [Datadog Security Labs](https://securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/), [Socket.dev](https://socket.dev/blog/node-ipc-package-compromised), and [StepSecurity](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack).

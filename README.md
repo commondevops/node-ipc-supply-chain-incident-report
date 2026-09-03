@@ -13,7 +13,7 @@
 
 ## Executive Summary
 
-In May 2026, three malicious node-ipc releases appeared on npm while the upstream project still showed 12.0.0. The malicious versions were 9.1.6, 9.2.3, and 12.0.1, published through the official npm distribution channel. The gap exposed how much modern software depends on trust outside the code we can see.
+In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases appeared on npm while the upstream project still showed 12.0.0. The malicious versions were 9.1.6, 9.2.3, and 12.0.1, published through the official npm distribution channel. The gap exposed how much modern software depends on trust outside the code we can see.
 
 ## Contents
 
@@ -49,3 +49,11 @@ In May 2026, three malicious node-ipc releases appeared on npm while the upstrea
 ## About this report
 
 This is a structured, evidence-based incident report. Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Scope, Evidence Method & Register for the evidence register and method.
+
+## Related Coverage
+
+Independent analyses of this incident:
+
+- [Datadog Security Labs](https://securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/) — malware analysis and payload breakdown
+- [Socket.dev](https://socket.dev/blog/node-ipc-package-compromised) — package compromise detection and timeline
+- [StepSecurity](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack) — supply-chain attack writeup

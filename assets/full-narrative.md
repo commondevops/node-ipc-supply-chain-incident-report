@@ -6,7 +6,7 @@
 
 In May 2026, three malicious node-ipc releases appeared on npm while the upstream project still showed 12.0.0. The gap exposed how much modern software depends on trust outside the code we can see.
 
-![Source repository vs distribution channel divergence](https://comdevopsai.github.io/node-ipc-post-incident/01-source-vs-distribution.png)
+![Source repository vs distribution channel divergence](images/01-source-vs-distribution.png)
 
 On May 14, 2026, a developer opening the `node-ipc` project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm was no longer telling the same story.
 
@@ -30,7 +30,7 @@ The malicious `node-ipc` releases were designed to inspect developer and CI envi
 
 That proximity is what gave the compromise its reach. A third-party package running in a development environment may sit only a few steps away from private repositories, cloud accounts, deployment infrastructure, and production-adjacent systems. The dangerous part of a malicious dependency is therefore not only the code inside it, but the environment that agrees to run it.
 
-![Multiple layers of trust around node-ipc](https://comdevopsai.github.io/node-ipc-post-incident/03-multiple-layers-of-trust.png)
+![Multiple layers of trust around node-ipc](images/03-multiple-layers-of-trust.png)
 
 A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
 
@@ -42,7 +42,7 @@ Once researchers recognized the malicious releases, the incident moved quickly. 
 
 That difference became the defining clue. The GitHub project was still on `12.0.0`; npm contained releases that did not belong to the same source history. Investigators were not simply looking at unwanted code merged into a repository. They were looking at a distribution path that had separated from it.
 
-![Two-day shockwave timeline of the node-ipc incident](https://comdevopsai.github.io/node-ipc-post-incident/02-two-day-shockwave.png)
+![Two-day shockwave timeline of the node-ipc incident](images/02-two-day-shockwave.png)
 
 By May 15, the repository owner had publicly confirmed that the malicious package was present on the official npm channel. Write access was restricted, credentials other than the owner's were revoked, and the malicious tarballs were reported removed. In little more than a day, a familiar open-source dependency had become the center of an ecosystem-wide security response.
 
@@ -74,9 +74,9 @@ A useful analogy is not a thief breaking into every building on a street, but so
 
 ## Trust travels with the package
 
-The `node-ipc` incident crossed layers that software teams often manage as separate problems. A maintainer identity can possess publishing rights. Publishing rights determine what appears in a registry. The registry supplies software to developer machines and CI systems. Those systems contain credentials and configuration. Those credentials can lead to larger environments.
+The `node-ipc` incident crossed layers that software teams manage as separate problems. A maintainer identity can possess publishing rights. Publishing rights determine what appears in a registry. The registry supplies software to developer machines and CI systems. Those systems contain credentials and configuration. Those credentials can lead to larger environments.
 
-![Trust chain diagram](https://comdevopsai.github.io/node-ipc-post-incident/04-trust-chain.png)
+![Trust chain diagram](images/04-trust-chain.png)
 
 Seen that way, `node-ipc` was not only an npm incident. It was an identity incident, a distribution incident, and a developer-security incident. Each layer inherited confidence from the one before it. The package was trusted partly because the registry delivered it; the registry release was trusted partly because valid publishing authority had produced it; the code was allowed to run because all of those earlier assumptions normally hold.
 

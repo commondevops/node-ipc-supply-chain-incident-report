@@ -2,9 +2,9 @@
 
 ## The source-vs-distribution gap
 
-![Source repository vs distribution channel divergence](https://comdevopsai.github.io/node-ipc-post-incident/01-source-vs-distribution.png)
+![Source repository vs distribution channel divergence](../assets/images/01-source-vs-distribution.png)
 
-In May 2026, three malicious `node-ipc` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
+In May 2026, three malicious `[node-ipc](https://www.npmjs.com/package/node-ipc)` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
 On May 14, 2026, a developer opening the `node-ipc` project on GitHub would have seen little reason for alarm. The upstream repository still pointed to version `12.0.0`, the project looked much as it had before, and nothing about the familiar source page suggested that the package had become the center of a security incident. But the software arriving through npm no longer matched what the source page showed.
 
@@ -28,7 +28,7 @@ The malicious `node-ipc` releases were designed to inspect developer and CI envi
 
 That proximity is what gave the compromise its reach. A third-party package running in a development environment may sit only a few steps away from private repositories, cloud accounts, deployment infrastructure, and production-adjacent systems. The dangerous part of a malicious dependency is therefore not only the code inside it, but the environment that agrees to run it.
 
-![Multiple layers of trust around node-ipc](https://comdevopsai.github.io/node-ipc-post-incident/03-multiple-layers-of-trust.png)
+![Multiple layers of trust around node-ipc](../assets/images/03-multiple-layers-of-trust.png)
 
 A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
 
@@ -40,7 +40,7 @@ This section records the technical facts from the incident record, with a confid
 
 ### Origin of the public report
 
-The public incident began with GitHub issue #15, opened on **14 May 2026 at 15:01:21Z**, titled *"[SECURITY][REPORT] node-ipc@12.0.1 CJS bundle contains obfuscated infostealer payload."* The report states that malicious code had been appended to the CommonJS bundle after the legitimate `module.exports` boundary.
+The public incident began with [GitHub issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15), opened on **14 May 2026 at 15:01:21Z**, titled *"[SECURITY][REPORT] node-ipc@12.0.1 CJS bundle contains obfuscated infostealer payload."* The report states that malicious code had been appended to the CommonJS bundle after the legitimate `module.exports` boundary.
 
 The issue documents a package shasum for `12.0.1`:
 
@@ -54,7 +54,7 @@ Version `9.1.6` was added in a contemporaneous GitHub issue discussion, and it i
 
 ### Release timing
 
-The investigation record reports a rapid three-release sequence: `12.0.1`, followed roughly 30 seconds later by `9.2.3`, then roughly 30 seconds later by `9.1.6`. The comment gives a first clock time of **14:25:30** but does not state a timezone; this report does not invent one.
+The investigation record reports a rapid three-release sequence: `12.0.1`, followed ~30 seconds later by `9.2.3`, then ~30 seconds later by `9.1.6`. The comment gives a first clock time of **14:25:30** but does not state a timezone; this report does not invent one.
 
 ### Entry point and execution condition
 

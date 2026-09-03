@@ -128,7 +128,15 @@ function inlineRender(text) {
   // c. Images (before links so the leading ! is consumed).
   s = s.replace(
     /!\[([^\]]*)\]\(\s*([^)\s]+)(?:\s+&quot;[^&quot;]*&quot;)?\s*\)/g,
-    (m, alt, url) => `<img src="${url}" alt="${alt}">`
+    (m, alt, url) => {
+      // Rewrite relative image paths to images/filename for dist/ serving
+      let src = url;
+      const imgMatch = url.match(/(?:^|\/)(images|assets\/images)\/([^/]+)$/);
+      if (imgMatch) {
+        src = `images/${imgMatch[2]}`;
+      }
+      return `<img src="${src}" alt="${alt}">`;
+    }
   );
 
   // d. Links (apply internal-link rewriting to the href).

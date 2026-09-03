@@ -1,6 +1,6 @@
 # Timeline: Forty-Eight Hours
 
-Once researchers recognized the malicious releases, the incident moved quickly. It went from malicious publication to public investigation and containment in roughly two days.
+Once researchers recognized the malicious releases, the incident moved quickly. It went from malicious publication to public investigation and containment in two days.
 
 ## Master Timeline
 
@@ -14,9 +14,9 @@ The creation timestamp for `azurestaticprovider.net` was observed in WHOIS (evid
 
 ### 2026-05-14 14:25:30 — First malicious publish (timezone unstated)
 
-An investigator reported the first malicious publish (`12.0.1`), followed by `9.2.3` and then `9.1.6` at roughly 30-second intervals (evidence strength: Medium/High; investigator report). The record gives a first clock time of 14:25:30 but does not state a timezone, and this report does not invent one. The compromise lived in `node-ipc.cjs`, the CommonJS entry point; the ESM entry point `node-ipc.js` and the other source files were clean.
+An investigator reported the first malicious publish (`12.0.1`), followed by `9.2.3` and then `9.1.6` at 30-second intervals (evidence strength: Medium/High; investigator report). The record gives a first clock time of 14:25:30 but does not state a timezone, and this report does not invent one. The compromise lived in `node-ipc.cjs`, the CommonJS entry point; the ESM entry point `node-ipc.js` and the other source files were clean.
 
-### 2026-05-14 15:01:21Z — GitHub security issue #15 opened
+### 2026-05-14 15:01:21Z — [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) opened
 
 The public incident began with GitHub issue #15, opened at 15:01:21Z and titled "[SECURITY][REPORT] node-ipc@12.0.1 CJS bundle contains obfuscated infostealer payload." (evidence strength: High). The report states that malicious code had been appended to the CommonJS bundle after the legitimate `module.exports` boundary, and it documents a package shasum for `12.0.1`: `fe5d107b9d285327af579259a32977c4f475fa26`.
 
@@ -48,7 +48,7 @@ Namecheap acknowledged the report (evidence strength: High) and stated that it w
 
 Namecheap said the allegation could not be validated from the supplied evidence and that legal process is required for preservation (evidence strength: High). It had investigated "to the extent of our capabilities," requested additional evidence, and stated that preservation requests are processed upon receipt of a U.S. court order or subpoena by the Senior Legal department.
 
-![Two-day shockwave timeline of the node-ipc incident](https://comdevopsai.github.io/node-ipc-post-incident/02-two-day-shockwave.png)
+![Two-day shockwave timeline of the node-ipc incident](../assets/images/02-two-day-shockwave.png)
 
 ## Why the speed matters
 

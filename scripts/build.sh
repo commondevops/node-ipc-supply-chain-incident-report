@@ -36,4 +36,10 @@ done
 
 node "$ROOT/scripts/md2html.js" "${files[@]}" -o "$OUT_FILE"
 
+# Copy image assets into dist/
+mkdir -p "$ROOT/dist/images"
+cp "$ROOT/assets/images/"*.png "$ROOT/dist/images/"
+echo "Images copied to dist/images/"
+ls -la "$ROOT/dist/images/"
+
 echo "wrote $OUT_FILE ($(wc -c < "$OUT_FILE") bytes)"

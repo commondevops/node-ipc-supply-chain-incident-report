@@ -6,7 +6,7 @@ This report was produced by Common Devops. We are the authors of this incident i
 
 ## How we became involved
 
-We first learned about the `node-ipc` compromise through public reporting. We went to the primary source — the GitHub security issue (#15) and its thread — and engaged directly with the maintainer. From that starting point we conducted an independent investigation into the domain, DNS, email, and registrar evidence surrounding the incident.
+We first learned about the `node-ipc` compromise through public reporting. We went to the primary source — the [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) and its thread — and engaged directly with the maintainer. From that starting point we conducted an independent investigation into the domain, DNS, email, and registrar evidence surrounding the incident.
 
 ## What we did
 
