@@ -110,17 +110,10 @@ On May 14, 2026, they became the story.
 
 ## Sources
 
-1. **GitHub issue #15 — primary contemporaneous incident record**
+1. **GitHub issue #15 — primary incident record**
    [github.com/RIAEvangelist/node-ipc/issues/15](https://github.com/RIAEvangelist/node-ipc/issues/15)
 
-2. **Datadog Security Labs — independent malware analysis**
-   [securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/](https://securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/)
+2. **Time-stamped screenshots and emails from Aaron Schneider, security researcher at Common DevOps**
 
-3. **Socket — independent package analysis**
-   [socket.dev/blog/node-ipc-package-compromised](https://socket.dev/blog/node-ipc-package-compromised)
-
-4. **StepSecurity — independent supply-chain analysis**
-   [stepsecurity.io/blog/node-ipc-npm-supply-chain-attack](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack)
-
-5. **Upstream `node-ipc` repository**
-   [github.com/RIAEvangelist/node-ipc](https://github.com/RIAEvangelist/node-ipc)
+3. **Recorded post-incident interview with Brandon Miller
+   [interview with Brandon Miller](https://www.youtube.com/watch?v=TZ04u6cj1ls)
