@@ -4,47 +4,61 @@
 
 | Field | Value |
 | --- | --- |
-| Published | August 30, 2026 |
-| Incident date | May 14, 2026 |
-| Contained by | May 15, 2026 |
+| Published | 2026-08-30 |
+| Incident date | 2026-05-14 |
+| Contained by | 2026-05-15 |
 | Severity | CRITICAL |
 | Category | Software Supply Chain |
 | Author | Common Devops |
 
 ## Executive Summary
 
-In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases appeared on npm while the upstream project still showed 12.0.0. The malicious versions were 9.1.6, 9.2.3, and 12.0.1, published through the official npm distribution channel. The gap exposed how much modern software depends on trust outside the code we can see.
+In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases—9.1.6, 9.2.3, and 12.0.1—appeared on npm while the upstream project still showed 12.0.0, published through the official distribution channel. The root cause was unauthorized use of valid npm publishing authority tied to a dormant maintainer identity whose email domain (`atlantis-software.net`) had lapsed and been re-registered. The incident was detected through public GitHub issue #15 and contained within two days. This report reconstructs the technical behavior, the attribution evidence, the root cause, and the detection and remediation path; every claim carries a confidence rating (definitions in Appendix B).
 
 ## Contents
 
-### Part I — Background & The Incident
+1. [Background](docs/01-background.md)
+   - 1.1 What is node-ipc?
+   - 1.2 The source-vs-distribution gap
+2. [Incident Overview](docs/02-incident-overview.md)
+   - 2.1 Incident record
+   - 2.2 Timeline
+3. [Impact Assessment](docs/03-impact.md)
+   - 3.1 Why the developer environment is the target
+   - 3.2 How trust propagates through the supply chain
+   - 3.3 Capability vs impact & exposure states
+4. [Technical Analysis](docs/04-technical-analysis.md)
+   - 4.1 Entry point and execution condition
+   - 4.2 Reconnaissance and credential collection
+   - 4.3 Staging and encoding
+   - 4.4 DNS exfiltration design
+   - 4.5 Process behavior and cleanup
+   - 4.6 C2 and DNS infrastructure investigation
+5. [Attribution & Evidence](docs/05-attribution.md)
+   - 5.1 Maintainer identity & publishing path
+   - 5.2 Domain, email & registrar evidence
+6. [Root Cause Analysis](docs/06-root-cause.md)
+   - 6.1 Unmonitored identity infrastructure
+   - 6.2 Root-cause statement
+7. [Detection & Indicators](docs/07-detection.md)
+   - 7.1 Package and file indicators
+   - 7.2 Runtime indicators
+   - 7.3 Network indicators
+   - 7.4 Detection priorities
+8. [Remediation & Recommendations](docs/08-remediation.md)
+   - 8.1 Corrective & Preventive Actions
+   - 8.2 Trust-path analysis
+9. [Lessons Learned](docs/09-lessons-learned.md)
+   - 9.1 Exploiting existing trust
+   - 9.2 Trust is a property of the supply chain, not the package name
+   - 9.3 Findings at a Glance
+   - 9.4 Conclusion
 
-1. [What is node-ipc?](docs/what-is-node-ipc.md)
-2. [Incident Overview & Background](docs/overview.md)
-3. [Timeline](docs/timeline.md)
+### Appendices
 
-### Part II — Investigation & Attribution
-
-1. [Technical Attack Reconstruction](docs/technical-analysis.md)
-2. [Maintainer Identity & Publishing Path](docs/maintainer-identity.md)
-3. [Domain, Email & Registrar Evidence](docs/domain-email-registrar.md)
-
-### Part III — Root Cause & Impact
-
-1. [Root Cause Analysis](docs/root-cause.md)
-2. [Impact & Threat Model](docs/impact.md)
-
-### Part IV — Detection & Remediation
-
-1. [Indicators & Detection Opportunities](docs/indicators.md)
-2. [Remediation & Recommendations](docs/remediation.md)
-
-### Part V — Reflection & Method
-
-1. [Known Unknowns](docs/known-unknowns.md)
-2. [Lessons Learned](docs/lessons-learned.md)
-3. [Scope, Evidence Method & Register](docs/evidence-method.md)
-4. [Common Devops & Our Involvement](docs/our-involvement.md)
+- [Appendix A — Known Unknowns](docs/A-known-unknowns.md)
+- [Appendix B — Scope, Evidence Method & Register](docs/B-evidence-method.md)
+- [Appendix C — About the Authors](docs/C-about-authors.md)
 
 ## Key Facts
 
@@ -53,8 +67,8 @@ In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) 
 | Package | node-ipc |
 | Upstream version | 12.0.0 |
 | Malicious versions | 9.1.6, 9.2.3, 12.0.1 |
-| Incident date | May 14, 2026 |
-| Contained by | May 15, 2026 |
+| Incident date | 2026-05-14 |
+| Contained by | 2026-05-15 |
 | Detection | Public GitHub issue #15 |
 | Root cause | Dormant maintainer identity tied to lapsed domain atlantis-software.net |
 | 12.0.1 shasum | fe5d107b9d285327af579259a32977c4f475fa26 |
@@ -62,7 +76,7 @@ In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) 
 
 ## About this report
 
-This is a structured, evidence-based incident report. Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Scope, Evidence Method & Register for the evidence register and method.
+This is a structured, evidence-based incident report. Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Appendix B (Scope, Evidence Method & Register) for the evidence register and method.
 
 ## Related Coverage
 

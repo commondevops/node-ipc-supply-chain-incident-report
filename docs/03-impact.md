@@ -1,6 +1,6 @@
-# Impact & Threat Model
+# 3. Impact Assessment
 
-## Value of the developer environment to an attacker
+## 3.1 Why the developer environment is the target
 
 A developer laptop is rarely just a laptop, and a CI runner is rarely just a machine that runs tests. These environments sit at the intersection of an organization's code, credentials, infrastructure, and release process. They may be able to reach private repositories, cloud services, deployment platforms, package registries, Kubernetes clusters, internal databases, and production-adjacent systems.
 
@@ -10,7 +10,21 @@ This is why a small dependency can produce outsized concern. The package itself 
 
 A useful analogy is not a thief breaking into every building on a street, but someone compromising the courier who already has keys, routes, and permission to enter.
 
-## How trust propagates through the supply chain
+Open-source software works because developers do not build everything themselves. A modern application may rely on hundreds or thousands of components maintained by people the application team will never meet. This arrangement lets small teams build large systems by inheriting years of work from the ecosystem around them.
+
+They inherit something else as well. Every dependency brings assumptions about who controls it, how releases are published, and what the package will be allowed to do once it reaches a developer workstation or CI environment. Most of those assumptions remain invisible until one of them fails.
+
+The malicious `node-ipc` releases were designed to inspect developer and CI environments for sensitive information. Their targets were developer and CI credentials and configuration (the full collection-target breakdown is in Section 4.2). These were not simply interesting files on a machine; many represented access to the systems developers use to build, deploy, and operate software.
+
+That proximity is what gave the compromise its reach. A third-party package running in a development environment may sit only a few steps away from private repositories, cloud accounts, deployment infrastructure, and production-adjacent systems. The dangerous part of a malicious dependency is therefore not only the code inside it, but the environment that agrees to run it.
+
+![Multiple layers of trust around node-ipc](../assets/images-web/03-multiple-layers-of-trust.jpeg)
+
+A compromised dependency does not need to attack every downstream system directly. If it reaches an environment that already possesses legitimate access, some of the hardest work has already been done for it.
+
+The value of the target lay not in the package contents but in the environments that would execute it.
+
+## 3.2 How trust propagates through the supply chain
 
 The `node-ipc` incident crossed layers that software teams manage as separate problems. A maintainer identity can possess publishing rights. Publishing rights determine what appears in a registry. The registry supplies software to developer machines and CI systems. Those systems contain credentials and configuration. Those credentials can lead to larger environments.
 
@@ -24,11 +38,11 @@ This is both the strength and the weakness of modern software reuse. Developers 
 
 This does not argue against open source; modern software development would be nearly impossible without it. It does argue for treating trust as something to be re-verified over time, because a package can deserve confidence for years and still become dangerous if control of its publishing path changes.
 
-## Impact & Exposure Assessment
+## 3.3 Capability vs impact & exposure states
 
 The incident should be evaluated as a sequence of increasingly strong impact states, rather than as a single binary outcome. Each state proves something different, and the investigation's confidence in each state differs accordingly.
 
-The "Malicious version published" state proves that a supply-chain compromise exists, with a status of Confirmed in this investigation. The "Package selected/downloaded" state proves potential consumer exposure, with a status of Environment-specific in this investigation. The "Compromised CJS loaded" state proves that the malicious runtime path was reached, with a status of Requires victim evidence in this investigation. The "Collection observed" state proves that host secrets were actually read, with a status of Requires victim evidence in this investigation. The "Archive staged" state proves that the collection pipeline progressed, with a status of Requires victim evidence in this investigation. The "DNS exfil queries emitted" state proves that an exfiltration attempt occurred, with a status of Requires DNS/host evidence in this investigation. The "Remote receipt proven" state proves that the attacker received victim data, with a status of Not established in this investigation.
+The "Malicious version published" state proves that a supply-chain compromise exists, with a status of Confirmed in this investigation. The "Package selected/downloaded" state proves potential consumer exposure, with a status of Environment-specific in this investigation. The "Compromised CJS loaded" state proves that the malicious runtime path was reached, with a status of Requires victim evidence in this investigation. The "Collection observed" state proves that host secrets were actually read, with a status of Requires victim evidence in this investigation. The "Archive staged" state proves that the collection pipeline progressed, with a status of Requires victim evidence in this investigation. The "DNS-exfiltration queries emitted" state proves that an exfiltration attempt occurred, with a status of Requires DNS/host evidence in this investigation. The "Remote receipt proven" state proves that the attacker received victim data, with a status of Not established in this investigation.
 
 This distinction is operationally important for incident response. A host that merely contains a malicious package may warrant investigation and secret rotation based on risk, but the forensic statement should not be upgraded to "confirmed data theft" without supporting telemetry. Stages marked *Requires victim evidence* or *Not established* cannot be asserted from the package contents alone; they depend on host-level telemetry (process, filesystem, and DNS records) specific to each affected machine. Where that evidence is absent, the correct statement is a risk-based recommendation, not a confirmed impact claim.
 

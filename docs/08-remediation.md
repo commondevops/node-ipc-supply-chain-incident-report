@@ -1,8 +1,8 @@
-# Remediation & Recommendations
+# 8. Remediation & Recommendations
 
 No development team can realistically inspect every line of every dependency it uses, and perfect inspection would not solve the larger problem anyway. Software changes continuously. Maintainers change, releases change, account ownership changes, infrastructure changes, and dependencies acquire dependencies of their own. Security has to survive those changes rather than assume they will never happen.
 
-## Corrective & Preventive Actions
+## 8.1 Corrective & Preventive Actions
 
 The incident exposes a chain of trust assumptions that can be broken at several points: who is authorized to publish, what credentials the package can reach, and how a malicious release is detected and contained. The actions below are grouped by horizon.
 
@@ -18,7 +18,7 @@ Require phishing-resistant MFA for publisher accounts where available, to reduce
 
 Establish formal publisher lifecycle governance, and treat publishing access for critical packages like production access—limited, reviewed, and removed when it is no longer necessary. Create rapid package-takedown and maintainer-notification procedures, to shorten the time a malicious release stays available. Require provenance or verifiable build relationships for critical packages, so consumers can confirm a release matches its claimed source. Perform exercises that treat dependency compromise as both a software and identity incident, because the publishing path—not just the code—is what must be defended.
 
-## Trust-path analysis
+## 8.2 Trust-path analysis
 
 A dependency incident should therefore trigger a broader question than "Which version did we install?" Teams also need to ask what the package could reach, what credentials were present, where those credentials led, and what assumptions allowed the package to run there in the first place.
 
