@@ -28,7 +28,7 @@ The issue states that the malicious code existed in `node-ipc.cjs`, the CommonJS
 
 ### Verification in the issue thread
 
-A researcher responding to the issue reported manually confirming the compromise and notifying npm security. The same thread identified `9.2.3`, `12.0.1`, and then `9.1.6` as affected.
+A researcher responding to the issue reported manually confirming the compromise and notifying [npm](https://www.npmjs.com) security. The same thread identified `9.2.3`, `12.0.1`, and then `9.1.6` as affected.
 
 ## 2.2 Timeline
 

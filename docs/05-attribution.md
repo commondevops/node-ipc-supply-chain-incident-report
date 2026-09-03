@@ -4,7 +4,7 @@
 
 ### Introduction
 
-The strongest public connection between the malicious npm artifacts and a maintainer identity appears in the GitHub investigation thread. Investigators reported that the malicious tarballs contained:
+The strongest public connection between the malicious [npm](https://www.npmjs.com) artifacts and a maintainer identity appears in the [issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) investigation thread. Investigators reported that the malicious tarballs contained:
 
 ```
 _npmUser: atiertant
@@ -42,7 +42,7 @@ The consolidated root-cause statement is given in Section 6.
 
 The contemporaneous WHOIS capture preserved by the investigator records the details of the domain visible during the incident.
 
-The domain was `ATLANTIS-SOFTWARE.NET`. The registrar was Namecheap, Inc. The creation date was `2026-05-07T11:49:33Z`. The nameservers were `DNS1.REGISTRAR-SERVERS.COM` and `DNS2.REGISTRAR-SERVERS.COM`. The registrant details were privacy-protected.
+The domain was `ATLANTIS-SOFTWARE.NET`. The registrar was [Namecheap](https://www.namecheap.com), Inc. The creation date was `2026-05-07T11:49:33Z`. The nameservers were `DNS1.REGISTRAR-SERVERS.COM` and `DNS2.REGISTRAR-SERVERS.COM`. The registrant details were privacy-protected.
 
 ![WHOIS capture of atlantis-software.net (Namecheap, created 2026-05-07)](../assets/images-web/atlantis-whois.jpeg)
 

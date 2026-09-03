@@ -2,7 +2,7 @@
 
 ## B.1 Scope
 
-This report reconstructs four related questions. It asks what malicious behavior was present in the affected `node-ipc` npm releases. It asks what evidence connects the publication event to a maintainer publishing identity. It asks what the independent domain, DNS, and email investigation established. It also asks which causal claims are supported, plausible, or still unresolved.
+This report reconstructs four related questions. It asks what malicious behavior was present in the affected [`node-ipc`](https://www.npmjs.com/package/node-ipc) npm releases. It asks what evidence connects the publication event to a maintainer publishing identity. It asks what the independent domain, DNS, and email investigation established. It also asks which causal claims are supported, plausible, or still unresolved.
 
 The report does **not** attempt to identify a specific human actor. It also does not claim victim compromise without victim-specific telemetry.
 
@@ -10,7 +10,7 @@ The report does **not** attempt to identify a specific human actor. It also does
 
 The analysis uses three evidence classes.
 
-The **Primary / direct** class consists of original records or contemporaneous artifacts, such as GitHub issue/comments, original screenshots, original email thread, full message headers, and Namecheap correspondence. The **Corroborating technical** class consists of independent technical observations consistent with primary evidence, such as package reconstruction in the issue, DNS/WHOIS observations, and npm/GitHub profile captures. The **Inference** class consists of an explanation that connects established observations, such as domain reacquisition used for npm password recovery, operator identity, and motive.
+The **Primary / direct** class consists of original records or contemporaneous artifacts, such as GitHub issue/comments, original screenshots, original email thread, full message headers, and Namecheap correspondence. The **Corroborating technical** class consists of independent technical observations consistent with primary evidence, such as package reconstruction in the issue, DNS/WHOIS observations, and npm/GitHub profile captures. The **Inference** class consists of an explanation that connects established observations, such as domain reacquisition used for [npm](https://www.npmjs.com) password recovery, operator identity, and motive.
 
 A primary record can still contain an investigator's hypothesis. The classification applies to the **claim**, not simply to the document containing it.
 
@@ -46,4 +46,4 @@ SPF and DKIM results demonstrate authorized domain-mail infrastructure use for t
 The screenshots document what queried services returned during the investigation. They do not prove historical state outside the query time, actor ownership, or malicious intent.
 
 **Preservation correspondence**
-The correspondence proves submission, acknowledgement, and Namecheap's stated legal-process requirement. It does not prove that preservation occurred.
+The correspondence proves submission, acknowledgement, and [Namecheap](https://www.namecheap.com)'s stated legal-process requirement. It does not prove that preservation occurred.

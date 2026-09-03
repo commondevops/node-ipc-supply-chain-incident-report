@@ -4,9 +4,9 @@
 
 ## Executive Summary
 
-In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases—9.1.6, 9.2.3, and 12.0.1—appeared on npm while the upstream project still showed 12.0.0, published through the official distribution channel.
+In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases—9.1.6, 9.2.3, and 12.0.1—appeared on [npm](https://www.npmjs.com) while the upstream project still showed 12.0.0, published through the official distribution channel.
 The root cause was unauthorized use of valid npm publishing authority tied to a dormant maintainer identity whose email domain (`atlantis-software.net`) had lapsed and been re-registered.
-The incident was detected through public GitHub issue #15 and contained within two days.
+The incident was detected through public [GitHub issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) and contained within two days.
 This report reconstructs the technical behavior, the attribution evidence, the root cause, and the detection and remediation path; every claim carries a confidence rating (definitions in Appendix B).
 
 ## Contents

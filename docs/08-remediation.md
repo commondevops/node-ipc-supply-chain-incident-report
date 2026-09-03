@@ -8,7 +8,7 @@ The incident exposes a chain of trust assumptions that can be broken at several 
 
 ### Immediate
 
-Remove or disable stale publisher identities, and give old collaborator accounts and maintainer domains proper lifecycle management so dormant identities are removed rather than left behind. Rotate credentials present on systems that executed affected CommonJS versions, to limit what a compromised host can do with them. Hunt package caches, lockfiles, CI environments, and developer workstations for affected versions, so every environment that may have resolved the malicious artifacts is identified. Block or investigate the documented DNS indicators, to contain and detect exfiltration attempts. Preserve relevant DNS, process, endpoint, and identity telemetry, so that host-level evidence can be correlated later.
+Remove or disable stale [npm](https://www.npmjs.com) publisher identities, and give old collaborator accounts and maintainer domains proper lifecycle management so dormant identities are removed rather than left behind. Rotate credentials present on systems that executed affected CommonJS versions, to limit what a compromised host can do with them. Hunt package caches, lockfiles, CI environments, and developer workstations for affected versions, so every environment that may have resolved the malicious artifacts is identified. Block or investigate the documented DNS indicators, to contain and detect exfiltration attempts. Preserve relevant DNS, process, endpoint, and identity telemetry, so that host-level evidence can be correlated later.
 
 ### Near term
 

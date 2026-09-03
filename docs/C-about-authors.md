@@ -11,7 +11,7 @@ We first learned about the `node-ipc` compromise through public reporting. We we
 ## C.3 What we did
 
 - **Independent domain, DNS, and email/registrar investigation.** We examined `atlantis-software.net` (WHOIS, nameservers, registration timing) and `azurestaticprovider.net`, analyzed mailbox control, and assessed message authentication (SPF/DKIM/DMARC).
-- **Preserved contemporaneous evidence.** We retained WHOIS and DNS captures, npm/GitHub profile screenshots, the preserved email thread, and an original-message header export.
+- **Preserved contemporaneous evidence.** We retained WHOIS and DNS captures, [npm](https://www.npmjs.com)/GitHub profile screenshots, the preserved email thread, and an original-message header export.
 - **Submitted a preservation request to Namecheap** on 2026-05-19, requesting registrar account details, webmail sessions, and related records. We documented their 2026-05-22 response and the legal-process (court order / subpoena) boundary for preservation.
 - **Compiled the evidence register** (E-01 through E-09) and produced this structured, confidence-rated report.
 

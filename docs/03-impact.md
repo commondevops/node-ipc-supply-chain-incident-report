@@ -14,7 +14,7 @@ Open-source software works because developers do not build everything themselves
 
 They inherit something else as well. Every dependency brings assumptions about who controls it, how releases are published, and what the package will be allowed to do once it reaches a developer workstation or CI environment. Most of those assumptions remain invisible until one of them fails.
 
-The malicious `node-ipc` releases were designed to inspect developer and CI environments for sensitive information. Their targets were developer and CI credentials and configuration (the full collection-target breakdown is in Section 4.2). These were not simply interesting files on a machine; many represented access to the systems developers use to build, deploy, and operate software.
+The malicious [`node-ipc`](https://www.npmjs.com/package/node-ipc) releases were designed to inspect developer and CI environments for sensitive information. Their targets were developer and CI credentials and configuration (the full collection-target breakdown is in Section 4.2). These were not simply interesting files on a machine; many represented access to the systems developers use to build, deploy, and operate software.
 
 That proximity is what gave the compromise its reach. A third-party package running in a development environment may sit only a few steps away from private repositories, cloud accounts, deployment infrastructure, and production-adjacent systems. The dangerous part of a malicious dependency is therefore not only the code inside it, but the environment that agrees to run it.
 
@@ -30,7 +30,7 @@ The `node-ipc` incident crossed layers that software teams manage as separate pr
 
 ![Trust chain diagram](../assets/images-web/04-trust-chain.jpeg)
 
-Seen that way, `node-ipc` was not only an npm incident. It was an identity incident, a distribution incident, and a developer-security incident. Each layer inherited confidence from the one before it. The package was trusted partly because the registry delivered it; the registry release was trusted partly because valid publishing authority had produced it; the code was allowed to run because all of those earlier assumptions normally hold.
+Seen that way, `node-ipc` was not only an [npm](https://www.npmjs.com) incident. It was an identity incident, a distribution incident, and a developer-security incident. Each layer inherited confidence from the one before it. The package was trusted partly because the registry delivered it; the registry release was trusted partly because valid publishing authority had produced it; the code was allowed to run because all of those earlier assumptions normally hold.
 
 For a broader threat-model perspective on how supply-chain compromises propagate across trust boundaries, see [StepSecurity's writeup](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack).
 

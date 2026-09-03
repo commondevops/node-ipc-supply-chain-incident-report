@@ -2,7 +2,7 @@
 
 The following questions remain open; the current evidence does not justify closing these gaps through inference.
 
-What exact npm authentication or recovery event preceded the malicious publication? No npm login or recovery telemetry is on file to identify that event.
+What exact [npm](https://www.npmjs.com) authentication or recovery event preceded the malicious publication? No npm login or recovery telemetry is on file to identify that event.
 
 Which IP addresses, devices, and user agents accessed the npm publisher account? No npm access logs were preserved to identify the systems involved.
 

@@ -18,7 +18,7 @@ Dormant identities remain exploitable even after they are no longer actively man
 
 ## 6.2 Root-cause statement
 
-The demonstrated chain runs from valid npm publishing authority through malicious npm versions, vulnerable dependency resolution, a compromised CommonJS execution path, and finally to credential collection and DNS-exfiltration capability; the identity chain runs from a lapsed maintainer email domain to a new registration, mailbox operation, npm account recovery, and the use of publisher authority. The step-by-step confidence assessment for each link is given in Section 3.3.
+The demonstrated chain runs from valid [npm](https://www.npmjs.com) publishing authority through malicious npm versions, vulnerable dependency resolution, a compromised CommonJS execution path, and finally to credential collection and DNS-exfiltration capability; the identity chain runs from a lapsed maintainer email domain to a new registration, mailbox operation, npm account recovery, and the use of publisher authority. The step-by-step confidence assessment for each link is given in Section 3.3.
 
 The evidence directly supports:
 
