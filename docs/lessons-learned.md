@@ -2,7 +2,7 @@
 
 ## Exploiting existing trust
 
-The `[node-ipc](https://www.npmjs.com/package/node-ipc)` incident showed how ordinary its starting point was. There was no need for the package name to change, no need for developers to adopt an unfamiliar tool, and no need for the upstream project to suddenly look obviously hostile. The attack could benefit from trust that had already been earned.
+The [node-ipc](https://www.npmjs.com/package/node-ipc) incident showed how ordinary its starting point was. There was no need for the package name to change, no need for developers to adopt an unfamiliar tool, and no need for the upstream project to suddenly look obviously hostile. The attack could benefit from trust that had already been earned.
 
 That is the defining advantage of a software supply-chain attack. Rather than breaking into each system individually, it can compromise something an organization has already chosen to trust and run.
 

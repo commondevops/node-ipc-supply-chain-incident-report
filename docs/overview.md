@@ -4,7 +4,7 @@
 
 ![Source repository vs distribution channel divergence](../assets/images-web/01-source-vs-distribution.jpeg)
 
-In May 2026, three malicious `[node-ipc](https://www.npmjs.com/package/node-ipc)` releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
+In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases appeared on npm while the upstream project still showed `12.0.0`. The gap exposed how much modern software depends on trust outside the code we can see.
 
 On May 14, 2026, the upstream [node-ipc](https://github.com/RIAEvangelist/node-ipc) repository on GitHub still pointed to version `12.0.0` and appeared much as it had before. The software arriving through npm, however, no longer matched what the source page showed.
 
