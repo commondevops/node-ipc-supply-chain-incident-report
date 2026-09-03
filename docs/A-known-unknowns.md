@@ -1,4 +1,4 @@
-# Known Unknowns
+# Appendix A — Known Unknowns
 
 The following questions remain open; the current evidence does not justify closing these gaps through inference.
 

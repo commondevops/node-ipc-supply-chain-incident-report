@@ -1,12 +1,12 @@
-# Scope, Evidence Method & Register
+# Appendix B — Scope, Evidence Method & Register
 
-## 1. Scope
+## B.1 Scope
 
 This report reconstructs four related questions. It asks what malicious behavior was present in the affected `node-ipc` npm releases. It asks what evidence connects the publication event to a maintainer publishing identity. It asks what the independent domain, DNS, and email investigation established. It also asks which causal claims are supported, plausible, or still unresolved.
 
 The report does **not** attempt to identify a specific human actor. It also does not claim victim compromise without victim-specific telemetry.
 
-## 2. Evidence classes
+## B.2 Evidence classes
 
 The analysis uses three evidence classes.
 
@@ -14,11 +14,11 @@ The **Primary / direct** class consists of original records or contemporaneous a
 
 A primary record can still contain an investigator's hypothesis. The classification applies to the **claim**, not simply to the document containing it.
 
-## 3. Confidence language
+## B.3 Confidence language
 
 **Confirmed / High** means the claim is directly supported by primary evidence or multiple independent observations. **Supported / Medium** means the evidence is consistent and meaningful but incomplete. **Plausible / Low** means a reasonable explanation where a required causal link is absent. **Not established** means the available evidence does not support the claim.
 
-## 4. Evidence register (Appendix A)
+## B.4 Evidence register
 
 | ID | Artifact | Role | SHA-256 |
 |---|---|---|---|
@@ -32,7 +32,7 @@ A primary record can still contain an investigator's hypothesis. The classificat
 | E-08 | `Re_ [NC-HHL-2847] ... .eml` | Investigator follow-up | `64f7e0b064aabc663b0870033b791bd1bc369f4e817be4962714cd45a0da3ad2` |
 | E-09 | `[NC-HHL-2847] ... .eml` | Namecheap final response | `add337e740d20c0080c41dc53034021fde2930e577309aed9cf7cb3645b41265` |
 
-## 5. Primary source notes (Appendix B)
+## B.5 Primary source notes
 
 **GitHub Issue #15**
 `https://github.com/RIAEvangelist/node-ipc/issues/15`
