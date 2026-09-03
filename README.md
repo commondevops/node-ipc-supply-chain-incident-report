@@ -12,41 +12,41 @@ This report reconstructs the technical behavior, the attribution evidence, the r
 ## Contents
 
 1. [Background](docs/01-background.md)
-   - 1.1 What is node-ipc?
-   - 1.2 The source-vs-distribution gap
+  - 1.1 What is node-ipc?
+  - 1.2 The source-vs-distribution gap
 2. [Incident Overview](docs/02-incident-overview.md)
-   - 2.1 Incident record
-   - 2.2 Timeline
+  - 2.1 Incident record
+  - 2.2 Timeline
 3. [Impact Assessment](docs/03-impact.md)
-   - 3.1 Why the developer environment is the target
-   - 3.2 How trust propagates through the supply chain
-   - 3.3 Capability vs impact & exposure states
+  - 3.1 Why the developer environment is the target
+  - 3.2 How trust propagates through the supply chain
+  - 3.3 Capability vs impact & exposure states
 4. [Technical Analysis](docs/04-technical-analysis.md)
-   - 4.1 Entry point and execution condition
-   - 4.2 Reconnaissance and credential collection
-   - 4.3 Staging and encoding
-   - 4.4 DNS exfiltration design
-   - 4.5 Process behavior and cleanup
-   - 4.6 C2 and DNS infrastructure investigation
+  - 4.1 Entry point and execution condition
+  - 4.2 Reconnaissance and credential collection
+  - 4.3 Staging and encoding
+  - 4.4 DNS exfiltration design
+  - 4.5 Process behavior and cleanup
+  - 4.6 C2 and DNS infrastructure investigation
 5. [Attribution & Evidence](docs/05-attribution.md)
-   - 5.1 Maintainer identity & publishing path
-   - 5.2 Domain, email & registrar evidence
+  - 5.1 Maintainer identity & publishing path
+  - 5.2 Domain, email & registrar evidence
 6. [Root Cause Analysis](docs/06-root-cause.md)
-   - 6.1 Unmonitored identity infrastructure
-   - 6.2 Root-cause statement
+  - 6.1 Unmonitored identity infrastructure
+  - 6.2 Root-cause statement
 7. [Detection & Indicators](docs/07-detection.md)
-   - 7.1 Package and file indicators
-   - 7.2 Runtime indicators
-   - 7.3 Network indicators
-   - 7.4 Detection priorities
+  - 7.1 Package and file indicators
+  - 7.2 Runtime indicators
+  - 7.3 Network indicators
+  - 7.4 Detection priorities
 8. [Remediation & Recommendations](docs/08-remediation.md)
-   - 8.1 Corrective & Preventive Actions
-   - 8.2 Trust-path analysis
+  - 8.1 Corrective & Preventive Actions
+  - 8.2 Trust-path analysis
 9. [Lessons Learned](docs/09-lessons-learned.md)
-   - 9.1 Exploiting existing trust
-   - 9.2 Trust is a property of the supply chain, not the package name
-   - 9.3 Findings at a Glance
-   - 9.4 Conclusion
+  - 9.1 Exploiting existing trust
+  - 9.2 Trust is a property of the supply chain, not the package name
+  - 9.3 Findings at a Glance
+  - 9.4 Conclusion
 
 ### Appendices
 
