@@ -1,19 +1,13 @@
 # node-ipc Supply Chain Incident Report
 
-**A structured, evidence-based post-incident report**
-
-| Field | Value |
-| --- | --- |
-| Published | 2026-08-30 |
-| Incident date | 2026-05-14 |
-| Contained by | 2026-05-15 |
-| Severity | CRITICAL |
-| Category | Software Supply Chain |
-| Author | Common Devops |
+*A structured, evidence-based report of the node-ipc supply chain incident.*
 
 ## Executive Summary
 
-In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases—9.1.6, 9.2.3, and 12.0.1—appeared on npm while the upstream project still showed 12.0.0, published through the official distribution channel. The root cause was unauthorized use of valid npm publishing authority tied to a dormant maintainer identity whose email domain (`atlantis-software.net`) had lapsed and been re-registered. The incident was detected through public GitHub issue #15 and contained within two days. This report reconstructs the technical behavior, the attribution evidence, the root cause, and the detection and remediation path; every claim carries a confidence rating (definitions in Appendix B).
+In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) releases—9.1.6, 9.2.3, and 12.0.1—appeared on npm while the upstream project still showed 12.0.0, published through the official distribution channel.
+The root cause was unauthorized use of valid npm publishing authority tied to a dormant maintainer identity whose email domain (`atlantis-software.net`) had lapsed and been re-registered.
+The incident was detected through public GitHub issue #15 and contained within two days.
+This report reconstructs the technical behavior, the attribution evidence, the root cause, and the detection and remediation path; every claim carries a confidence rating (definitions in Appendix B).
 
 ## Contents
 
@@ -76,7 +70,17 @@ In May 2026, three malicious [node-ipc](https://www.npmjs.com/package/node-ipc) 
 
 ## About this report
 
-This is a structured, evidence-based incident report. Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Appendix B (Scope, Evidence Method & Register) for the evidence register and method.
+This is a structured, evidence-based incident report.
+Claims carry confidence ratings (Confirmed / Supported / Plausible / Not established); see Appendix B (Scope, Evidence Method & Register) for the evidence register and method.
+
+| Field | Value |
+| --- | --- |
+| Published | 2026-08-30 |
+| Incident date | 2026-05-14 |
+| Contained by | 2026-05-15 |
+| Severity | CRITICAL |
+| Category | Software Supply Chain |
+| Author | Common Devops |
 
 ## Related Coverage
 
