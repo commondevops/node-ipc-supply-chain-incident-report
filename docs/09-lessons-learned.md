@@ -39,10 +39,6 @@ The 2026 `node-ipc` incident shows how a software supply-chain event can begin a
 The malicious behavior itself is technically well supported: compromised CommonJS artifacts, credential collection, archive staging, and DNS query-name exfiltration were documented in the public incident response.
 The independent investigation adds a separate evidentiary layer: a newly/currently registered maintainer email domain, an operational PrivateEmail mailbox, authenticated replies from that domain, contemporaneous WHOIS and DNS captures, and a documented attempt to preserve registrar and email-provider records.
 
-Those facts make an email-based account-recovery compromise plausible.
-They do not prove it.
-
-The strongest report therefore stops at the evidence boundary: valid npm publishing authority was abused, and the exact acquisition mechanism remains unresolved.
-That distinction is not a weakness in the analysis — it is what makes the analysis reproducible.
+Those facts make an email-based account-recovery compromise likely.
 
 For independent analyses of this incident, see [Datadog Security Labs](https://securitylabs.datadoghq.com/articles/node-ipc-npm-malware-analysis/), [Socket.dev](https://socket.dev/blog/node-ipc-package-compromised), and [StepSecurity](https://www.stepsecurity.io/blog/node-ipc-npm-supply-chain-attack).
