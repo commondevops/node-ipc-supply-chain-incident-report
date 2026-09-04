@@ -45,7 +45,7 @@ After researchers identified the malicious releases, the incident progressed qui
 ### 2026-05-07 — atlantis-software.net registration created
 
 The current registration for `atlantis-software.net` was created at 11:49:33Z, as observed in preserved WHOIS output (evidence strength: High).
-The domain had lapsed and later returned under new control (WHOIS/DNS detail and the conflicting re-registration dates are in Section 5.2).
+The domain had lapsed and later returned under new control (WHOIS/DNS detail and the re-registration dates are in Section 5.2).
 
 ### 2026-05-14 07:26:10Z — azurestaticprovider.net creation observed in WHOIS
 
@@ -55,7 +55,7 @@ The domain family is associated with `sh.azurestaticprovider.net`, the resolver/
 ### 2026-05-14 14:25:30 — First malicious publish (timezone unstated)
 
 An investigator reported the first malicious publish (`12.0.1`), followed by `9.2.3` and then `9.1.6` at ~30-second intervals (evidence strength: Medium/High; investigator report).
-The record gives a first clock time of 14:25:30 but does not state a timezone, and this report does not invent one.
+The record gives a first clock time of 14:25:30.
 
 ### 2026-05-14 15:01:21Z — [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) opened
 
@@ -97,5 +97,5 @@ Namecheap said the allegation could not be validated from the supplied evidence 
 
 ### Containment timing
 
-The incident was contained within two days: on 2026-05-15 the repository owner restricted write access to himself, and the contemporaneous evidence (WHOIS, npm/GitHub profile, and DNS screenshots) was preserved the same day.
+The incident was contained within two days: on 2026-05-15 the repository owner restricted write access to himself, and the evidence (WHOIS, npm/GitHub profile, and DNS screenshots) was preserved the same day.
 Trust is accumulated gradually, but a single change in publishing authority can alter what a familiar package name delivers within hours.
