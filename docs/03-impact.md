@@ -1,6 +1,6 @@
 # 3. Impact Assessment
 
-## 3.1 Why the developer environment is the target
+## 3.1 Developer environments as a target
 
 A developer laptop is rarely just a laptop, and a CI runner is rarely just a machine that runs tests.
 These environments sit at the intersection of an organization's code, credentials, infrastructure, and release process.
