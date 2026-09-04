@@ -41,9 +41,9 @@ Human identity evidence for the mailbox operator, which would move attribution b
 The absence of these artifacts means the chain from domain reacquisition to a concrete npm password reset is inferred, not directly observed.
 Where a claim rests on inference rather than a preserved record, this document marks it as plausible rather than confirmed.
 
-### Contemporaneous profile evidence
+### Github profile evidence
 
-A contemporaneous investigator screenshot preserved the GitHub profile associated with `atiertant` during the investigation (source: original May 2026 screenshot archive).
+Common DevOps security researcher (Aaron Schneider) screenshot preserved the GitHub profile associated with `atiertant` during the investigation (source: original May 2026 screenshot archive).
 This capture is contextual evidence only.
 It establishes how the account and its associated projects appeared at the time, but it does not prove that the GitHub account itself was compromised or used to publish the npm malware.
 
@@ -55,7 +55,7 @@ The consolidated root-cause statement is given in Section 6.
 
 ### `atlantis-software.net` registration
 
-The contemporaneous WHOIS capture preserved by the investigator records the details of the domain visible during the incident.
+The WHOIS capture preserved by the investigator records the details of the domain visible during the incident.
 
 The domain was `ATLANTIS-SOFTWARE.NET`.
 The registrar was [Namecheap](https://www.namecheap.com), Inc.
@@ -65,7 +65,7 @@ The registrant details were privacy-protected.
 
 ![WHOIS capture of atlantis-software.net (Namecheap, created 2026-05-07)](../assets/images-web/atlantis-whois.jpeg)
 
-This contemporaneous capture materially strengthens the 2026-05-07 date.
+This capture materially strengthens the 2026-05-07 date.
 It is a snapshot of registry/registrar output taken at the time, not a later narrative recollection.
 
 #### Conflicting re-registration dates
