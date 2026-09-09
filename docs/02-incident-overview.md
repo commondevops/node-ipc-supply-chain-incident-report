@@ -25,7 +25,7 @@ Version `12.0.1` is documented by the original issue and technical analysis, and
 ### Release timing
 
 The investigation record reports a rapid three-release sequence: `12.0.1`, followed ~30 seconds later by `9.2.3`, then ~30 seconds later by `9.1.6`.
-The comment gives a first clock time of **14:25:30** but does not state a timezone; this report does not invent one.
+The comment gives a first clock time of **14:25:30** 
 
 ### Entry point and execution condition
 
@@ -52,7 +52,7 @@ The domain had lapsed and later returned under new control (WHOIS/DNS detail and
 The creation timestamp for `azurestaticprovider.net` was observed in WHOIS (evidence strength: High).
 The domain family is associated with `sh.azurestaticprovider.net`, the resolver/C2-related host; the creation timestamp falls on the same date as the malicious `node-ipc` publication, though timing alone does not establish operator identity (WHOIS/DNS detail in Section 4.6).
 
-### 2026-05-14 14:25:30 — First malicious publish (timezone unstated)
+### 2026-05-14 14:25:30 — First malicious publish
 
 An investigator reported the first malicious publish (`12.0.1`), followed by `9.2.3` and then `9.1.6` at ~30-second intervals (evidence strength: Medium/High; investigator report).
 The record gives a first clock time of 14:25:30.
@@ -98,4 +98,3 @@ Namecheap said the allegation could not be validated from the supplied evidence 
 ### Containment timing
 
 The incident was contained within two days: on 2026-05-15 the repository owner restricted write access to himself, and the evidence (WHOIS, npm/GitHub profile, and DNS screenshots) was preserved the same day.
-Trust is accumulated gradually, but a single change in publishing authority can alter what a familiar package name delivers within hours.
