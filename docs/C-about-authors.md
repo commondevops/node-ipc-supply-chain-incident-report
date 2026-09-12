@@ -20,8 +20,8 @@ Full list of investigators:
 ## C.2 How we became involved
 
 We first learned about the `node-ipc` compromise through public reporting.
-We went to the primary source — the [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) and its thread — and engaged directly with the maintainer.
-From that starting point we conducted an independent investigation into the domain, DNS, email, and registrar evidence surrounding the incident.
+We went to the primary source, [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15) and its thread, to engaged directly.
+From that starting point we conducted an independent investigation into the domain, DNS, email, and registrar evidence surrounding the incident. In addition, we interviewed Brandon Miller (RIAEvangelist), the repo owner.
 
 ## C.3 What we did
 
