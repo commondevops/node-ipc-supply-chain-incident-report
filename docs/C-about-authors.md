@@ -2,8 +2,20 @@
 
 ## C.1 Who we are
 
-This report was produced by Common Devops.
-We are the authors of this incident investigation.
+This report was produced by Common DevOps.  Independent analysis led by security researcher Aaron Schneider, with assistance from Dr. Ian Miller and Javier Bonilla. We are the authors of this incident paper.
+
+The initial issue and subsequent coordinated investigation started when @nullcharb (Ahmed) opened [GitHub security issue #15](https://github.com/RIAEvangelist/node-ipc/issues/15). First reported to NPM by @carlini (Nicholas Carlini)
+
+Full list of investigators: 
+@RIAEvangelist
+@nullcharb
+@carlini
+@ashishkurmi 
+@cyb3rjerry 
+@Roni-Carta 
+@jimmytsadiotis
+@danielweck
+
 
 ## C.2 How we became involved
 
@@ -23,4 +35,4 @@ We documented their 2026-05-22 response and the legal-process (court order / sub
 
 ## C.4 Scope and boundaries
 
-We did not attempt to identify a specific human actor, and we did not claim victim compromise without victim-specific telemetry; where evidence was insufficient we marked the claim as Plausible or Not established rather than asserting it (full scope statement in Appendix B, Section B.1).
+Where evidence was insufficient we marked the claim as Plausible or Not established rather than asserting it (full scope statement in Appendix B, Section B.1).
